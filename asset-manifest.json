@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/grandecines_website/static/css/main.c26a1e90.css",
+    "main.js": "/grandecines_website/static/js/main.72b76ca1.js",
+    "index.html": "/grandecines_website/index.html",
+    "main.c26a1e90.css.map": "/grandecines_website/static/css/main.c26a1e90.css.map",
+    "main.72b76ca1.js.map": "/grandecines_website/static/js/main.72b76ca1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c26a1e90.css",
+    "static/js/main.72b76ca1.js"
+  ]
+}
