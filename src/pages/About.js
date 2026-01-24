@@ -1,5 +1,4 @@
 
-import React from "react";
 import { motion } from "framer-motion";
 
 export default function About() {
@@ -15,11 +14,40 @@ export default function About() {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 40 },
+    hidden: { opacity: 0, y: 40, scale: 0.95 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6 },
+      scale: 1,
+      transition: { type: "spring", stiffness: 100, damping: 12 },
+    },
+  };
+
+  const bounceVariants = {
+    hidden: { opacity: 0, scale: 0.8, y: 50 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      y: 0,
+      transition: { type: "spring", stiffness: 200, damping: 15 },
+    },
+  };
+
+  const slideFromLeftVariants = {
+    hidden: { opacity: 0, x: -60 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { type: "spring", stiffness: 100, damping: 15 },
+    },
+  };
+
+  const slideFromRightVariants = {
+    hidden: { opacity: 0, x: 60 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { type: "spring", stiffness: 100, damping: 15 },
     },
   };
 
@@ -44,12 +72,118 @@ export default function About() {
         <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=900&h=500&fit=crop" alt="Cinema Hall" />
       </motion.div>
 
+      {/* About Grande Cines Section */}
       <motion.div
         className="feature-section"
         style={{ borderLeft: '4px solid #f5c518' }}
+        initial="hidden"
+        whileInView="visible"
+        variants={slideFromLeftVariants}
+        viewport={{ once: true }}
+      >
+        <h3>About Grande Cines</h3>
+        <p>Grande Cines is Guwahati's premier cinema destination, offering an unparalleled movie-watching experience in the heart of Assam. Established with the goal of revolutionizing entertainment in Northeast India, we are proud to be the first and only cinema in Guwahati to feature a state-of-the-art curved screen.</p>
+        <p style={{ marginTop: '15px' }}>Located in the bustling Paltan Bazar area, Grande Cines combines cutting-edge technology with luxurious comfort. Our two world-class auditoriums are equipped with Dolby Atmos sound systems, 4K laser projection, and premium recliner seating with neck pillows - ensuring every visit is a memorable experience. From the latest Bollywood blockbusters to Hollywood hits and regional cinema, we bring the best of entertainment to our patrons.</p>
+      </motion.div>
+
+      {/* Vision & Mission Section */}
+      <motion.div
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+          gap: '25px',
+          marginTop: '30px',
+        }}
+        initial="hidden"
+        whileInView="visible"
+        variants={containerVariants}
+        viewport={{ once: true }}
+      >
+        {/* Vision Card */}
+        <motion.div
+          variants={bounceVariants}
+          whileHover={{ scale: 1.02 }}
+          style={{
+            padding: '30px',
+            background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)',
+            borderRadius: '12px',
+            boxShadow: '0 10px 30px rgba(0,0,0,0.2)',
+          }}
+        >
+          <div style={{ fontSize: '3em', marginBottom: '15px' }}>🎯</div>
+          <h3 style={{ color: '#f5c518', marginBottom: '15px', fontSize: '1.5em' }}>Our Vision</h3>
+          <p style={{ color: '#ccc', lineHeight: '1.8' }}>
+            To be the most loved and preferred cinema destination in Northeast India, setting new benchmarks in entertainment excellence. We envision Grande Cines as a place where technology meets comfort, where every movie becomes an unforgettable journey, and where families and friends create lasting memories together.
+          </p>
+        </motion.div>
+
+        {/* Mission Card */}
+        <motion.div
+          variants={bounceVariants}
+          whileHover={{ scale: 1.02 }}
+          style={{
+            padding: '30px',
+            background: 'linear-gradient(135deg, #16213e 0%, #1a1a2e 100%)',
+            borderRadius: '12px',
+            boxShadow: '0 10px 30px rgba(0,0,0,0.2)',
+          }}
+        >
+          <div style={{ fontSize: '3em', marginBottom: '15px' }}>🚀</div>
+          <h3 style={{ color: '#f5c518', marginBottom: '15px', fontSize: '1.5em' }}>Our Mission</h3>
+          <p style={{ color: '#ccc', lineHeight: '1.8' }}>
+            To deliver world-class cinematic experiences through innovative technology, exceptional hospitality, and unwavering commitment to customer satisfaction. We strive to make every visit special by offering premium facilities, diverse entertainment options, and creating an inclusive environment where everyone can enjoy the magic of movies.
+          </p>
+        </motion.div>
+      </motion.div>
+
+      {/* Core Values */}
+      <motion.div
+        style={{ marginTop: '40px', textAlign: 'center' }}
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        <h2 style={{ marginBottom: '30px' }}>Our Core Values</h2>
+        <motion.div
+          style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}
+          initial="hidden"
+          whileInView="visible"
+          variants={containerVariants}
+          viewport={{ once: true }}
+        >
+          {[
+            { icon: '✨', value: 'Excellence' },
+            { icon: '🤝', value: 'Customer First' },
+            { icon: '💡', value: 'Innovation' },
+            { icon: '🎭', value: 'Entertainment' },
+            { icon: '❤️', value: 'Passion' },
+          ].map((item, index) => (
+            <motion.div
+              key={index}
+              variants={bounceVariants}
+              whileHover={{ scale: 1.1, y: -5 }}
+              style={{
+                padding: '20px 25px',
+                background: 'rgba(255, 255, 255, 0.95)',
+                borderRadius: '10px',
+                boxShadow: '0 4px 15px rgba(0,0,0,0.1)',
+                minWidth: '130px',
+              }}
+            >
+              <div style={{ fontSize: '2em', marginBottom: '10px' }}>{item.icon}</div>
+              <p style={{ color: '#1a1a2e', fontWeight: 'bold' }}>{item.value}</p>
+            </motion.div>
+          ))}
+        </motion.div>
+      </motion.div>
+
+      <motion.div
+        className="feature-section"
+        style={{ borderLeft: '4px solid #f5c518', marginTop: '40px' }}
+        initial="hidden"
+        whileInView="visible"
+        variants={slideFromLeftVariants}
         viewport={{ once: true }}
       >
         <h3>Guwahati's Only Curved Screen</h3>
@@ -58,9 +192,9 @@ export default function About() {
 
       <motion.div
         className="feature-section"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+        initial="hidden"
+        whileInView="visible"
+        variants={slideFromRightVariants}
         viewport={{ once: true }}
       >
         <h3>Our Story</h3>
@@ -112,21 +246,21 @@ export default function About() {
         variants={containerVariants}
         viewport={{ once: true }}
       >
-        <motion.div className="stat-card" variants={itemVariants}>
+        <motion.div className="stat-card" variants={bounceVariants}>
           <p className="number">2</p>
           <p>Premium Audis</p>
         </motion.div>
-        <motion.div className="stat-card" variants={itemVariants}>
-          <p className="number">200+</p>
+        <motion.div className="stat-card" variants={bounceVariants}>
+          <p className="number">400+</p>
           <p>Luxury Seats</p>
         </motion.div>
-        <motion.div className="stat-card" variants={itemVariants}>
+        <motion.div className="stat-card" variants={bounceVariants}>
           <p className="number">#1</p>
           <p>Curved Screen in Guwahati</p>
         </motion.div>
       </motion.div>
 
-      <motion.h2
+      {/* <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -137,9 +271,9 @@ export default function About() {
 
       <motion.div
         className="feature-section"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+        initial="hidden"
+        whileInView="visible"
+        variants={slideFromLeftVariants}
         viewport={{ once: true }}
       >
         <h3>Our Location</h3>
@@ -159,15 +293,15 @@ export default function About() {
       >
         <iframe
           title="Grande Cines Location"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.674!2d91.7468!3d26.1844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a5913b4b9a2b1%3A0x4b6c8c3b8c8c8c8c!2sPaltan%20Bazar%2C%20Guwahati%2C%20Assam!5e0!3m2!1sen!2sin!4v1234567890"
+          src="https://www.google.com/maps?q=Grande+Cines+Paltan+Bazar+Guwahati&output=embed"
           width="100%"
-          height="400"
+          height="250"
           style={{ border: 0 }}
           allowFullScreen=""
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
-      </motion.div>
+      </motion.div> */}
     </motion.div>
   );
 }

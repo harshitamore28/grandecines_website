@@ -32,11 +32,31 @@ export default function Upcoming() {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 40 },
+    hidden: { opacity: 0, y: 40, scale: 0.95 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6 },
+      scale: 1,
+      transition: { type: "spring", stiffness: 100, damping: 12 },
+    },
+  };
+
+  const bounceVariants = {
+    hidden: { opacity: 0, scale: 0.8, y: 50 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      y: 0,
+      transition: { type: "spring", stiffness: 200, damping: 15 },
+    },
+  };
+
+  const slideFromLeftVariants = {
+    hidden: { opacity: 0, x: -60 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { type: "spring", stiffness: 100, damping: 15 },
     },
   };
 
@@ -53,9 +73,9 @@ export default function Upcoming() {
 
       <motion.div
         className="feature-section"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+        initial="hidden"
+        whileInView="visible"
+        variants={slideFromLeftVariants}
         viewport={{ once: true }}
       >
         <h3>🎬 Coming Soon to Grande Cines</h3>
@@ -97,15 +117,15 @@ export default function Upcoming() {
         variants={containerVariants}
         viewport={{ once: true }}
       >
-        <motion.div className="stat-card" variants={itemVariants}>
+        <motion.div className="stat-card" variants={bounceVariants}>
           <p className="number">12</p>
           <p>Movies This Month</p>
         </motion.div>
-        <motion.div className="stat-card" variants={itemVariants}>
+        <motion.div className="stat-card" variants={bounceVariants}>
           <p className="number">6</p>
           <p>Blockbusters</p>
         </motion.div>
-        <motion.div className="stat-card" variants={itemVariants}>
+        <motion.div className="stat-card" variants={bounceVariants}>
           <p className="number">Early</p>
           <p>Bird Discount</p>
         </motion.div>

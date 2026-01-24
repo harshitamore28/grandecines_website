@@ -1,8 +1,35 @@
 
-import React from "react";
 import { motion } from "framer-motion";
 
 export default function Franchise() {
+  const bounceVariants = {
+    hidden: { opacity: 0, scale: 0.8, y: 50 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      y: 0,
+      transition: { type: "spring", stiffness: 200, damping: 15 },
+    },
+  };
+
+  const slideFromLeftVariants = {
+    hidden: { opacity: 0, x: -60 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { type: "spring", stiffness: 100, damping: 15 },
+    },
+  };
+
+  const slideFromRightVariants = {
+    hidden: { opacity: 0, x: 60 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { type: "spring", stiffness: 100, damping: 15 },
+    },
+  };
+
   const benefits = [
     { icon: "📽️", title: "Curved Screen Technology", desc: "Offer your customers the unique curved screen experience - a proven crowd puller" },
     { icon: "🎬", title: "Latest Technology", desc: "Access to cutting-edge cinema technology including 4K projection and Dolby Atmos" },
@@ -18,6 +45,7 @@ export default function Franchise() {
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
     >
       <h1>Franchise Opportunities</h1>
       <p>Bring Guwahati's Famous Curved Screen Cinema Experience to Your City</p>
@@ -35,9 +63,9 @@ export default function Franchise() {
       <motion.div
         className="feature-section"
         style={{ borderLeft: '4px solid #f5c518' }}
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+        initial="hidden"
+        whileInView="visible"
+        variants={slideFromLeftVariants}
         viewport={{ once: true }}
       >
         <h3>The Curved Screen Advantage</h3>
@@ -46,9 +74,9 @@ export default function Franchise() {
 
       <motion.div
         className="feature-section"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+        initial="hidden"
+        whileInView="visible"
+        variants={slideFromRightVariants}
         viewport={{ once: true }}
       >
         <h3>Why Franchise with Grande Cines?</h3>
@@ -83,14 +111,7 @@ export default function Franchise() {
           <motion.div
             key={index}
             className="card"
-            variants={{
-              hidden: { opacity: 0, y: 40 },
-              visible: {
-                opacity: 1,
-                y: 0,
-                transition: { duration: 0.6 },
-              },
-            }}
+            variants={bounceVariants}
             whileHover={{ scale: 1.05 }}
           >
             <div className="card-content" style={{ textAlign: 'center', paddingTop: '30px' }}>
@@ -118,45 +139,15 @@ export default function Franchise() {
         }}
         viewport={{ once: true }}
       >
-        <motion.div
-          className="stat-card"
-          variants={{
-            hidden: { opacity: 0, y: 40 },
-            visible: {
-              opacity: 1,
-              y: 0,
-              transition: { duration: 0.6 },
-            },
-          }}
-        >
+        <motion.div className="stat-card" variants={bounceVariants}>
           <p className="number">#1</p>
           <p>Curved Screen in NE India</p>
         </motion.div>
-        <motion.div
-          className="stat-card"
-          variants={{
-            hidden: { opacity: 0, y: 40 },
-            visible: {
-              opacity: 1,
-              y: 0,
-              transition: { duration: 0.6 },
-            },
-          }}
-        >
+        <motion.div className="stat-card" variants={bounceVariants}>
           <p className="number">100%</p>
           <p>Customer Satisfaction</p>
         </motion.div>
-        <motion.div
-          className="stat-card"
-          variants={{
-            hidden: { opacity: 0, y: 40 },
-            visible: {
-              opacity: 1,
-              y: 0,
-              transition: { duration: 0.6 },
-            },
-          }}
-        >
+        <motion.div className="stat-card" variants={bounceVariants}>
           <p className="number">High</p>
           <p>ROI Potential</p>
         </motion.div>
@@ -164,9 +155,9 @@ export default function Franchise() {
 
       <motion.div
         className="feature-section"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+        initial="hidden"
+        whileInView="visible"
+        variants={slideFromLeftVariants}
         viewport={{ once: true }}
       >
         <h3>Investment & Returns</h3>
@@ -178,9 +169,9 @@ export default function Franchise() {
 
       <motion.div
         className="feature-section"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+        initial="hidden"
+        whileInView="visible"
+        variants={slideFromRightVariants}
         viewport={{ once: true }}
       >
         <h3>Visit Our Flagship Location</h3>
@@ -197,16 +188,24 @@ export default function Franchise() {
         viewport={{ once: true }}
         style={{ marginTop: '20px', borderRadius: '12px', overflow: 'hidden' }}
       >
-        <iframe
-          title="Grande Cines Location"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.674!2d91.7468!3d26.1844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a5913b4b9a2b1%3A0x4b6c8c3b8c8c8c8c!2sPaltan%20Bazar%2C%20Guwahati%2C%20Assam!5e0!3m2!1sen!2sin!4v1234567890"
-          width="100%"
-          height="300"
-          style={{ border: 0 }}
-          allowFullScreen=""
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
+        <div style={{
+          borderRadius: '12px',
+          overflow: 'hidden',
+          boxShadow: '0 4px 20px rgba(0,0,0,0.15)',
+          maxWidth: '600px',
+          margin: '0 auto',
+        }}>
+          <iframe
+            title="Grande Cines Location"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.5153797970825!2d91.74882277556998!3d26.179907977091528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a5a297531bd2b%3A0x85a93a4fdc6c8156!2sGrande%20Cines!5e0!3m2!1sen!2sin!4v1769247345440!5m2!1sen!2sin"
+            width="100%"
+            height="250"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
       </motion.div>
 
       <motion.div

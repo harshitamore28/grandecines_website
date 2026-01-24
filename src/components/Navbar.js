@@ -17,9 +17,10 @@ export default function Navbar() {
       <div className="nav-links">
         <Link to="/" className={isActive("/")}>Home</Link>
         <Link to="/about" className={isActive("/about")}>About</Link>
-        <Link to="/now-showing" className={isActive("/now-showing")}>Now Showing</Link>
-        <Link to="/upcoming" className={isActive("/upcoming")}>Upcoming</Link>
+        <Link to="/movies" className={isActive("/movies")}>Movies</Link>
+        <Link to="/testimonials" className={isActive("/testimonials")}>Testimonials</Link>
         <Link to="/franchise" className={isActive("/franchise")}>Franchise</Link>
+        <Link to="/contactus" className={isActive("/contactus")}>Contact Us</Link>
       </div>
     </nav>
   );
