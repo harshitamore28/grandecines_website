@@ -55,8 +55,8 @@ export default function Contactus() {
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
     >
-      <h1>Contact Us</h1>
-      <p>Get in touch with Grande Cines - We'd love to hear from you!</p>
+      <h1 style={{textAlign:'center'}}>CONTACT US</h1>
+      {/* <p>Get in touch with Grande Cines - We'd love to hear from you!</p> */}
 
       {/* Contact Info Grid */}
       <motion.div
@@ -101,16 +101,16 @@ export default function Contactus() {
             <span style={{ fontSize: '3em' }}>📞</span>
             <h3 style={{ marginTop: '15px', color: '#1a1a2e' }}>Phone</h3>
             <p style={{ color: '#555', marginTop: '10px' }}>
-              <a href="tel:+919678867222" style={{ color: '#1a1a2e', textDecoration: 'none', fontWeight: 'bold' }}>
-                +91 967888 67222
+              <a href="tel:+919854017771" style={{ color: '#1a1a2e', textDecoration: 'none', fontWeight: 'bold' }}>
+                +91 98540 17771
               </a>
             </p>
-            <p style={{ color: '#555', marginTop: '5px' }}>
+            {/* <p style={{ color: '#555', marginTop: '5px' }}>
               <a href="tel:+917099991770" style={{ color: '#1a1a2e', textDecoration: 'none', fontWeight: 'bold' }}>
                 +91 70999 91770
               </a>
-            </p>
-            <p style={{ color: '#888', fontSize: '0.9em', marginTop: '10px' }}>Mon-Sun: 9:00 AM - 11:00 PM</p>
+            </p> */}
+            <p style={{ color: '#888', fontSize: '0.9em', marginTop: '10px' }}>10:00 AM - 5:00 PM</p>
           </div>
         </motion.div>
 
@@ -141,7 +141,7 @@ export default function Contactus() {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <h2 style={{ textAlign: 'center', marginBottom: '20px' }}>Find Us Here</h2>
+        <h2 style={{ textAlign: 'center', marginBottom: '20px' }}>FIND US</h2>
         <div style={{
           borderRadius: '12px',
           overflow: 'hidden',
@@ -181,9 +181,9 @@ export default function Contactus() {
         variants={slideFromLeftVariants}
         viewport={{ once: true }}
       >
-        <h3>Download Our App</h3>
-        <p>Get the Grande Cines app for easy booking, exclusive offers, and more!</p>
-        <div style={{ display: 'flex', gap: '15px', marginTop: '20px', flexWrap: 'wrap' }}>
+        <h3 style={{textAlign:'center'}}>DOWNLOAD OUR APP</h3>
+        {/* <p>Get the Grande Cines app for easy booking, exclusive offers, and more!</p> */}
+        <div style={{ display: 'flex', gap: '15px', marginTop: '20px', flexWrap: 'wrap', justifyContent:'center' }}>
           <motion.a
             href="https://play.google.com/store/apps/details?id=com.grandecines"
             target="_blank"
@@ -204,8 +204,7 @@ export default function Contactus() {
           >
             <span style={{ fontSize: '1.5em' }}>▶️</span>
             <div>
-              <div style={{ fontSize: '0.7em', opacity: 0.8 }}>GET IT ON</div>
-              <div>Google Play</div>
+              <div>Android</div>
             </div>
           </motion.a>
           <motion.a
@@ -226,10 +225,9 @@ export default function Contactus() {
               fontWeight: 'bold',
             }}
           >
-            <span style={{ fontSize: '1.5em' }}>🍎</span>
+            <img src="/apple.png" alt="Apple Logo" style={{ width: '24px', height: '30px' }} />
             <div>
-              <div style={{ fontSize: '0.7em', opacity: 0.8 }}>Download on the</div>
-              <div>App Store</div>
+              <div style={{ fontSize: '0.7em', opacity: 0.8 }}>Apple</div>
             </div>
           </motion.a>
         </div>
@@ -243,7 +241,7 @@ export default function Contactus() {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <h2 style={{ marginBottom: '20px' }}>Follow Us</h2>
+        <h2 style={{ marginBottom: '20px' }}>FOLLOW US</h2>
         <motion.div
           style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}
           initial="hidden"
@@ -269,9 +267,10 @@ export default function Contactus() {
               minWidth: '120px',
             }}
           >
-            <span style={{ fontSize: '2.5em' }}>📸</span>
+            <img src="instagram.png" alt="Instagram" style={{ width: '20px', height: '20px', marginRight: '8px'}} />
+            {/* <span style={{ fontSize: '2.5em' }}>📸</span> */}
             <span style={{ fontWeight: 'bold', marginTop: '10px' }}>Instagram</span>
-            <span style={{ fontSize: '0.8em', opacity: 0.9 }}>@grandecines</span>
+            {/* <span style={{ fontSize: '0.8em', opacity: 0.9 }}>@grandecines</span> */}
           </motion.a>
           <motion.a
             href="https://www.facebook.com/grandecines"
@@ -291,11 +290,12 @@ export default function Contactus() {
               minWidth: '120px',
             }}
           >
-            <span style={{ fontSize: '2.5em' }}>👍</span>
+            <img src="facebook.png" alt="Facebook" style={{ width: '20px', height: '20px', marginRight: '8px'}} />
+            {/* <span style={{ fontSize: '2.5em' }}>👍</span> */}
             <span style={{ fontWeight: 'bold', marginTop: '10px' }}>Facebook</span>
-            <span style={{ fontSize: '0.8em', opacity: 0.9 }}>Grande Cines</span>
+            {/* <span style={{ fontSize: '0.8em', opacity: 0.9 }}>Grande Cines</span> */}
           </motion.a>
-          <motion.a
+          {/* <motion.a
             href="https://twitter.com/grandecines"
             target="_blank"
             rel="noopener noreferrer"
@@ -338,7 +338,7 @@ export default function Contactus() {
             <span style={{ fontSize: '2.5em' }}>▶️</span>
             <span style={{ fontWeight: 'bold', marginTop: '10px' }}>YouTube</span>
             <span style={{ fontSize: '0.8em', opacity: 0.9 }}>Grande Cines</span>
-          </motion.a>
+          </motion.a> */}
         </motion.div>
       </motion.div>
 
@@ -350,12 +350,12 @@ export default function Contactus() {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <h2 style={{ textAlign: 'center', marginBottom: '10px' }}>Job Opportunities</h2>
-        <p style={{ textAlign: 'center', color: '#666', marginBottom: '30px' }}>
+        <h2 style={{ textAlign: 'center', marginBottom: '10px' }}>Want to work with us?</h2>
+        {/* <p style={{ textAlign: 'center', color: '#666', marginBottom: '30px' }}>
           Join our team and be part of the cinematic experience!
-        </p>
+        </p> */}
 
-        <motion.div
+        {/* <motion.div
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
@@ -404,7 +404,7 @@ export default function Contactus() {
               </motion.button>
             </motion.div>
           ))}
-        </motion.div>
+        </motion.div> */}
 
         <motion.div
           className="feature-section"
@@ -414,14 +414,14 @@ export default function Contactus() {
           variants={slideFromRightVariants}
           viewport={{ once: true }}
         >
-          <h3>Why Work With Us?</h3>
+          {/* <h3>Why Work With Us?</h3>
           <p>✓ Competitive salary packages</p>
           <p>✓ Free movie tickets for employees</p>
           <p>✓ Health insurance benefits</p>
           <p>✓ Career growth opportunities</p>
-          <p>✓ Fun and dynamic work environment</p>
+          <p>✓ Fun and dynamic work environment</p> */}
           <p style={{ marginTop: '15px', color: '#f5c518', fontWeight: 'bold' }}>
-            Send your resume to: jalanrishabh1@gmail.com
+            Drop in your CV at jalanrishabh1@gmail.com
           </p>
         </motion.div>
       </motion.div>
@@ -441,38 +441,30 @@ export default function Contactus() {
         viewport={{ once: true }}
       >
         <h3 style={{ color: 'white' }}>Have Questions?</h3>
-        <p style={{ color: '#ccc', marginBottom: '20px' }}>We're here to help! Reach out to us anytime.</p>
+        <p style={{ color: '#ccc', marginBottom: '20px' }}>Reach out to us on WhatsApp</p>
         <div style={{ display: 'flex', justifyContent: 'center', gap: '15px', flexWrap: 'wrap' }}>
           <motion.a
-            href="tel:+919678867222"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            href="https://wa.me/919854017771"
+            target="_blank"
+            rel="noopener noreferrer"
+            variants={bounceVariants}
+            whileHover={{ scale: 1.1, y: -5 }}
             style={{
-              padding: '12px 30px',
-              background: '#f5c518',
-              color: '#1a1a2e',
-              borderRadius: '8px',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              padding: '20px 30px',
+              background: '#25D366',
+              borderRadius: '12px',
               textDecoration: 'none',
-              fontWeight: 'bold',
+              color: 'white',
+              minWidth: '120px',
             }}
           >
-            📞 Call Now
-          </motion.a>
-          <motion.a
-            href="mailto:jalanrishabh1@gmail.com"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            style={{
-              padding: '12px 30px',
-              background: 'transparent',
-              color: '#f5c518',
-              borderRadius: '8px',
-              textDecoration: 'none',
-              fontWeight: 'bold',
-              border: '2px solid #f5c518',
-            }}
-          >
-            ✉️ Email Us
+            <img src="whatsapp.png" alt="WhatsApp" style={{ width: '20px', height: '20px', marginRight: '8px'}} />
+            {/* <span style={{ fontSize: '2.5em' }}>👍</span> */}
+            <span style={{ fontWeight: 'bold', marginTop: '10px' }}>WhatsApp</span>
+            {/* <span style={{ fontSize: '0.8em', opacity: 0.9 }}>Grande Cines</span> */}
           </motion.a>
         </div>
       </motion.div>

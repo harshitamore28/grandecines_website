@@ -12,13 +12,14 @@ export default function Navbar() {
   return (
     <nav>
       <div className="logo">
-        <img src="/logo_noref_nobg.png" alt="Grande Cines Logo" />
+         <Link to="/"><img src="/logo_noref_nobg.png" alt="Grande Cines Logo" /></Link>
+        
       </div>
       <div className="nav-links">
         <Link to="/" className={isActive("/")}>Home</Link>
         <Link to="/about" className={isActive("/about")}>About</Link>
         <Link to="/movies" className={isActive("/movies")}>Movies</Link>
-        <Link to="/testimonials" className={isActive("/testimonials")}>Testimonials</Link>
+        {/* <Link to="/testimonials" className={isActive("/testimonials")}>Testimonials</Link> */}
         <Link to="/franchise" className={isActive("/franchise")}>Franchise</Link>
         <Link to="/contactus" className={isActive("/contactus")}>Contact Us</Link>
       </div>

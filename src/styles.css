@@ -33,7 +33,7 @@ p {
 
 nav {
   background: rgba(255, 255, 255, 0.95);
-  padding: 20px 40px;
+  /* padding: 20px 40px; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -45,7 +45,7 @@ nav {
 }
 
 nav a {
-  margin: 8px 20px;
+  margin: -20px 20px;
   text-decoration: none;
   color: #333;
   font-weight: 500;

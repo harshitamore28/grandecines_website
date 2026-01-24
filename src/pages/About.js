@@ -59,8 +59,7 @@ export default function About() {
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
     >
-      <h1>About Grande Cines</h1>
-      <p>Guwahati's First & Only Curved Screen Cinema Experience</p>
+      <h1 style={{textAlign:'center'}}>ABOUT GRANDE CINES</h1>
 
       <motion.div
         className="hero"
@@ -81,7 +80,7 @@ export default function About() {
         variants={slideFromLeftVariants}
         viewport={{ once: true }}
       >
-        <h3>About Grande Cines</h3>
+        {/* <h3>About Grande Cines</h3> */}
         <p>Grande Cines is Guwahati's premier cinema destination, offering an unparalleled movie-watching experience in the heart of Assam. Established with the goal of revolutionizing entertainment in Northeast India, we are proud to be the first and only cinema in Guwahati to feature a state-of-the-art curved screen.</p>
         <p style={{ marginTop: '15px' }}>Located in the bustling Paltan Bazar area, Grande Cines combines cutting-edge technology with luxurious comfort. Our two world-class auditoriums are equipped with Dolby Atmos sound systems, 4K laser projection, and premium recliner seating with neck pillows - ensuring every visit is a memorable experience. From the latest Bollywood blockbusters to Hollywood hits and regional cinema, we bring the best of entertainment to our patrons.</p>
       </motion.div>
@@ -111,7 +110,7 @@ export default function About() {
           }}
         >
           <div style={{ fontSize: '3em', marginBottom: '15px' }}>🎯</div>
-          <h3 style={{ color: '#f5c518', marginBottom: '15px', fontSize: '1.5em' }}>Our Vision</h3>
+          <h3 style={{ color: '#f5c518', marginBottom: '15px', fontSize: '1.5em' }}>Vision</h3>
           <p style={{ color: '#ccc', lineHeight: '1.8' }}>
             To be the most loved and preferred cinema destination in Northeast India, setting new benchmarks in entertainment excellence. We envision Grande Cines as a place where technology meets comfort, where every movie becomes an unforgettable journey, and where families and friends create lasting memories together.
           </p>
@@ -129,7 +128,7 @@ export default function About() {
           }}
         >
           <div style={{ fontSize: '3em', marginBottom: '15px' }}>🚀</div>
-          <h3 style={{ color: '#f5c518', marginBottom: '15px', fontSize: '1.5em' }}>Our Mission</h3>
+          <h3 style={{ color: '#f5c518', marginBottom: '15px', fontSize: '1.5em' }}>Mission</h3>
           <p style={{ color: '#ccc', lineHeight: '1.8' }}>
             To deliver world-class cinematic experiences through innovative technology, exceptional hospitality, and unwavering commitment to customer satisfaction. We strive to make every visit special by offering premium facilities, diverse entertainment options, and creating an inclusive environment where everyone can enjoy the magic of movies.
           </p>
@@ -144,7 +143,7 @@ export default function About() {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <h2 style={{ marginBottom: '30px' }}>Our Core Values</h2>
+        <h2 style={{ marginBottom: '30px' }}>OUR CORE VALUES</h2>
         <motion.div
           style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}
           initial="hidden"
@@ -178,7 +177,7 @@ export default function About() {
         </motion.div>
       </motion.div>
 
-      <motion.div
+      {/* <motion.div
         className="feature-section"
         style={{ borderLeft: '4px solid #f5c518', marginTop: '40px' }}
         initial="hidden"
@@ -199,15 +198,16 @@ export default function About() {
       >
         <h3>Our Story</h3>
         <p>Grande Cines was founded with a vision to bring world-class cinema experience to Guwahati. Located in the heart of Paltan Bazar, we pride ourselves on offering the most advanced projection technology, premium sound systems, and luxurious seating - all centered around our signature curved screen that sets us apart from any other cinema in the region.</p>
-      </motion.div>
+      </motion.div> */}
 
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
+        style={{textAlign:'center'}}
       >
-        Why Choose Grande Cines?
+        GALLERY
       </motion.h2>
       <motion.div
         className="grid"
@@ -218,28 +218,56 @@ export default function About() {
       >
         <motion.div className="card" variants={itemVariants} whileHover={{ scale: 1.05 }}>
           <img src="https://images.unsplash.com/photo-1595769816263-9b910be24d5f?w=400&h=300&fit=crop" alt="Curved Screen" />
-          <div className="card-content">
+          {/* <div className="card-content">
             <h3>Curved Screen Technology</h3>
             <p>The only curved screen in Guwahati for an unmatched immersive cinematic experience.</p>
-          </div>
+          </div> */}
         </motion.div>
         <motion.div className="card" variants={itemVariants} whileHover={{ scale: 1.05 }}>
           <img src="https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?w=400&h=300&fit=crop" alt="Dolby Sound" />
-          <div className="card-content">
+          {/* <div className="card-content">
             <h3>Dolby Atmos Sound</h3>
             <p>World-class Dolby Atmos surround sound for crystal clear audio from every angle.</p>
-          </div>
+          </div> */}
         </motion.div>
         <motion.div className="card" variants={itemVariants} whileHover={{ scale: 1.05 }}>
           <img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?w=400&h=300&fit=crop" alt="Premium Seats" />
-          <div className="card-content">
+          {/* <div className="card-content">
             <h3>Luxury Recliner Seats</h3>
             <p>Premium reclining seats with ample legroom for ultimate comfort during long movies.</p>
-          </div>
+          </div> */}
         </motion.div>
       </motion.div>
-
-      <motion.div
+ <motion.div
+        className="grid"
+        initial="hidden"
+        whileInView="visible"
+        variants={containerVariants}
+        viewport={{ once: true }}
+      >
+        <motion.div className="card" variants={itemVariants} whileHover={{ scale: 1.05 }}>
+          <img src="https://images.unsplash.com/photo-1595769816263-9b910be24d5f?w=400&h=300&fit=crop" alt="Curved Screen" />
+          {/* <div className="card-content">
+            <h3>Curved Screen Technology</h3>
+            <p>The only curved screen in Guwahati for an unmatched immersive cinematic experience.</p>
+          </div> */}
+        </motion.div>
+        <motion.div className="card" variants={itemVariants} whileHover={{ scale: 1.05 }}>
+          <img src="https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?w=400&h=300&fit=crop" alt="Dolby Sound" />
+          {/* <div className="card-content">
+            <h3>Dolby Atmos Sound</h3>
+            <p>World-class Dolby Atmos surround sound for crystal clear audio from every angle.</p>
+          </div> */}
+        </motion.div>
+        <motion.div className="card" variants={itemVariants} whileHover={{ scale: 1.05 }}>
+          <img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?w=400&h=300&fit=crop" alt="Premium Seats" />
+          {/* <div className="card-content">
+            <h3>Luxury Recliner Seats</h3>
+            <p>Premium reclining seats with ample legroom for ultimate comfort during long movies.</p>
+          </div> */}
+        </motion.div>
+      </motion.div>
+      {/* <motion.div
         className="stats"
         initial="hidden"
         whileInView="visible"
@@ -258,7 +286,7 @@ export default function About() {
           <p className="number">#1</p>
           <p>Curved Screen in Guwahati</p>
         </motion.div>
-      </motion.div>
+      </motion.div> */}
 
       {/* <motion.h2
         initial={{ opacity: 0, y: 20 }}

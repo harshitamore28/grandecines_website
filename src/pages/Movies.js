@@ -85,8 +85,8 @@ export default function Movies() {
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
     >
-      <h1>Now Showing</h1>
-      <p>Latest blockbuster movies currently running in our theatres. Enjoy exclusive screenings with premium comfort.</p>
+      <h1 style={{ textAlign: 'center'}}>NOW SHOWING</h1>
+      <p style={{ textAlign: 'center'}}>Latest blockbuster movies currently running in our theatres. Enjoy exclusive screenings with premium comfort.</p>
 
       {loading ? (
         <div style={{ textAlign: "center", padding: "40px" }}>
@@ -123,7 +123,7 @@ export default function Movies() {
         </motion.div>
       )}
 
-      <motion.div
+      {/* <motion.div
         className="feature-section"
         initial="hidden"
         whileInView="visible"
@@ -132,7 +132,7 @@ export default function Movies() {
       >
         <h3>🎭 Special Offers</h3>
         <p>✓ Group bookings available for corporate events</p>
-      </motion.div>
+      </motion.div> */}
       <motion.div
             className="container"
             initial={{ opacity: 0, y: 40 }}
@@ -140,10 +140,10 @@ export default function Movies() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h1>Upcoming Movies</h1>
-            <p>Get ready for an exciting lineup of blockbuster releases. Reserve your tickets early for guaranteed seating!</p>
+            <h1 style={{textAlign:'center'}}>UPCOMING</h1>
+            <p style={{ textAlign: 'center'}}>Get ready for an exciting lineup of blockbuster releases. Reserve your tickets early for guaranteed seating!</p>
       
-            <motion.div
+            {/* <motion.div
               className="feature-section"
               initial="hidden"
               whileInView="visible"
@@ -152,7 +152,7 @@ export default function Movies() {
             >
               <h3>🎬 Coming Soon to Grande Cines</h3>
               <p>Be the first to experience the most anticipated movies of 2026!</p>
-            </motion.div>
+            </motion.div> */}
       
             {loading ? (
               <div style={{ textAlign: "center", padding: "40px" }}>
@@ -180,14 +180,14 @@ export default function Movies() {
                     <div className="card-content">
                       <h3>{movie.name}</h3>
                       <p style={{ color: '#f5c518', fontWeight: 'bold', marginTop: '10px' }}>Release Date: {formatReleaseDate(movie.release)}</p>
-                      <button>Notify Me</button>
+                      {/* <button>Notify Me</button> */}
                     </div>
                   </motion.div>
                 ))}
               </motion.div>
             )}
-      
-            <motion.div
+      <h1 style={{textAlign:'center'}}>FOR BOOKINGS</h1>
+            {/* <motion.div
               className="stats"
               initial="hidden"
               whileInView="visible"
@@ -202,7 +202,79 @@ export default function Movies() {
                 <p className="number">6</p>
                 <p>Blockbusters</p>
               </motion.div>
-            </motion.div>
+            </motion.div> */}
+                  <motion.div
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+          gap: '25px',
+          marginTop: '30px',
+        }}
+        initial="hidden"
+        whileInView="visible"
+        variants={containerVariants}
+        viewport={{ once: true }}
+      >
+        {/* Address Card */}
+        <motion.div
+          className="card"
+          variants={bounceVariants}
+          whileHover={{ scale: 1.03 }}
+          style={{ background: 'rgba(255, 255, 255, 0.95)' }}
+        >
+          <div className="card-content" style={{ padding: '25px', textAlign: 'center' }}>
+            <span style={{ fontSize: '3em' }}>📞</span>
+            <h3 style={{ marginTop: '15px', color: '#1a1a2e' }}>TeleBooking</h3>
+            <p style={{ color: '#555', lineHeight: '1.6', marginTop: '10px' }}>
+                <a href="tel:+919854017771" style={{color: '#1a1a2e', fontWeight: 'bold'}}>
+              +91 98540 17771
+              </a>
+            </p>
+          </div>
+        </motion.div>
+
+        {/* Phone Card */}
+        <motion.div
+          className="card"
+          variants={bounceVariants}
+          whileHover={{ scale: 1.03 }}
+          style={{ background: 'rgba(255, 255, 255, 0.95)' }}
+        >
+          <div className="card-content" style={{ padding: '25px', textAlign: 'center' }}>
+            <span style={{ fontSize: '3em' }}>🎬</span>
+            <h3 style={{ marginTop: '15px', color: '#1a1a2e' }}>BookMyShow</h3>
+            <p style={{ color: '#555', marginTop: '10px' }}>
+              <a href="https://in.bookmyshow.com/cinemas/GUW/grande-cines-paltan-bazar-guwahati/GRCG/" target='_blank' style={{ color: '#1a1a2e', fontWeight: 'bold' }}>
+                Book Now
+              </a>
+            </p>
+            {/* <p style={{ color: '#555', marginTop: '5px' }}>
+              <a href="tel:+917099991770" style={{ color: '#1a1a2e', textDecoration: 'none', fontWeight: 'bold' }}>
+                +91 70999 91770
+              </a>
+            </p> */}
+            {/* <p style={{ color: '#888', fontSize: '0.9em', marginTop: '10px' }}>Mon-Sun: 9:00 AM - 11:00 PM</p> */}
+          </div>
+        </motion.div>
+
+        {/* Email Card */}
+        <motion.div
+          className="card"
+          variants={bounceVariants}
+          whileHover={{ scale: 1.03 }}
+          style={{ background: 'rgba(255, 255, 255, 0.95)' }}
+        >
+          <div className="card-content" style={{ padding: '25px', textAlign: 'center' }}>
+            <span style={{ fontSize: '3em' }}>💼</span>
+            <h3 style={{ marginTop: '15px', color: '#1a1a2e' }}>Corporate</h3>
+            <p style={{ color: '#555', marginTop: '10px' }}>
+                <a href="tel:+919678867222" style={{color: '#1a1a2e', fontWeight: 'bold'}}>
+              +91 70999 91770
+              </a>
+            </p>
+          </div>
+        </motion.div>
+      </motion.div>
           </motion.div>
     </motion.div>
   );

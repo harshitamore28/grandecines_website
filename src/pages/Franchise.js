@@ -1,7 +1,42 @@
-
+import { useState } from "react";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
+
+// TODO: Replace with your EmailJS credentials from https://www.emailjs.com
+const EMAILJS_SERVICE_ID = "service_1bilevj";
+const EMAILJS_TEMPLATE_ID = "template_3ok4d4o";
+const EMAILJS_PUBLIC_KEY = "-uUlvbGAEiDSgGd8p";
 
 export default function Franchise() {
+  const [formData, setFormData] = useState({
+    from_name: "",
+    from_email: "",
+    phone: "",
+    city: "",
+    budget: "",
+    message: "",
+  });
+  const [status, setStatus] = useState({ loading: false, success: false, error: false });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setStatus({ loading: true, success: false, error: false });
+
+    emailjs
+      .send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, formData, EMAILJS_PUBLIC_KEY)
+      .then(() => {
+        setStatus({ loading: false, success: true, error: false });
+        setFormData({ from_name: "", from_email: "", phone: "", city: "", budget: "", message: "" });
+      })
+      .catch(() => {
+        setStatus({ loading: false, success: false, error: true });
+      });
+  };
+
   const bounceVariants = {
     hidden: { opacity: 0, scale: 0.8, y: 50 },
     visible: {
@@ -47,19 +82,7 @@ export default function Franchise() {
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
     >
-      <h1>Franchise Opportunities</h1>
-      <p>Bring Guwahati's Famous Curved Screen Cinema Experience to Your City</p>
-
-      <motion.div
-        className="hero"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-      >
-        <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=900&h=500&fit=crop" alt="Cinema Franchise" />
-      </motion.div>
-
+      <h1 style={{textAlign:'center'}}>PARTNER WITH US</h1>
       <motion.div
         className="feature-section"
         style={{ borderLeft: '4px solid #f5c518' }}
@@ -68,9 +91,23 @@ export default function Franchise() {
         variants={slideFromLeftVariants}
         viewport={{ once: true }}
       >
-        <h3>The Curved Screen Advantage</h3>
-        <p>Our flagship <strong>Curved Screen Technology</strong> has made Grande Cines a household name in Guwahati. As a franchise partner, you'll have exclusive rights to bring this unique cinema experience to your region - setting your theater apart from all competition.</p>
+        <h3>FRANCHISE OPPORTUNITY</h3>
+        {/* <p>Our flagship <strong>Curved Screen Technology</strong> has made Grande Cines a household name in Guwahati. As a franchise partner, you'll have exclusive rights to bring this unique cinema experience to your region - setting your theater apart from all competition.</p> */}
       </motion.div>
+      <h1 style={{textAlign:'center'}}>WHY US?</h1>
+      {/* <p>Bring Guwahati's Famous Curved Screen Cinema Experience to Your City</p> */}
+
+      {/* <motion.div
+        className="hero"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=900&h=500&fit=crop" alt="Cinema Franchise" />
+      </motion.div> */}
+
+      
 
       <motion.div
         className="feature-section"
@@ -171,53 +208,159 @@ export default function Franchise() {
         className="feature-section"
         initial="hidden"
         whileInView="visible"
-        variants={slideFromRightVariants}
+        variants={slideFromLeftVariants}
         viewport={{ once: true }}
+        style={{ marginTop: '40px' }}
       >
-        <h3>Visit Our Flagship Location</h3>
-        <p><strong>Grande Cines</strong></p>
-        <p>Paltan Bazar, Guwahati, Assam 781008</p>
-        <p>Near Guwahati Railway Station</p>
-        <p style={{ marginTop: '10px' }}>Experience our curved screen cinema firsthand before joining our franchise network!</p>
-      </motion.div>
-
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-        style={{ marginTop: '20px', borderRadius: '12px', overflow: 'hidden' }}
-      >
-        <div style={{
-          borderRadius: '12px',
-          overflow: 'hidden',
-          boxShadow: '0 4px 20px rgba(0,0,0,0.15)',
-          maxWidth: '600px',
-          margin: '0 auto',
-        }}>
-          <iframe
-            title="Grande Cines Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.5153797970825!2d91.74882277556998!3d26.179907977091528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a5a297531bd2b%3A0x85a93a4fdc6c8156!2sGrande%20Cines!5e0!3m2!1sen!2sin!4v1769247345440!5m2!1sen!2sin"
-            width="100%"
-            height="250"
-            style={{ border: 0 }}
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-      </motion.div>
-
-      <motion.div
-        style={{ textAlign: 'center', marginTop: '40px', padding: '30px', background: 'rgba(255, 255, 255, 0.7)', borderRadius: '12px' }}
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-      >
-        <h3>Ready to Bring Curved Screen Cinema to Your City?</h3>
-        <p>Contact our franchise team to learn more about this exciting opportunity</p>
-        <button style={{ marginTop: '20px' }}>Send Franchise Enquiry</button>
+        <h3 style={{ textAlign: 'center', marginBottom: '30px' }}>Franchise Enquiry Form</h3>
+        {status.success ? (
+          <div style={{ textAlign: 'center', padding: '40px', color: '#4CAF50' }}>
+            <div style={{ fontSize: '3em', marginBottom: '15px' }}>✓</div>
+            <h3>Thank you for your enquiry!</h3>
+            <p>We will contact you soon.</p>
+          </div>
+        ) : (
+          <form
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '20px',
+              maxWidth: '600px',
+              margin: '0 auto',
+            }}
+            onSubmit={handleSubmit}
+          >
+            <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
+              <input
+                type="text"
+                name="from_name"
+                placeholder="Full Name *"
+                required
+                value={formData.from_name}
+                onChange={handleChange}
+                style={{
+                  flex: '1 1 250px',
+                  padding: '15px',
+                  borderRadius: '8px',
+                  border: '1px solid #ddd',
+                  fontSize: '16px',
+                  outline: 'none',
+                }}
+              />
+              <input
+                type="email"
+                name="from_email"
+                placeholder="Email Address *"
+                required
+                value={formData.from_email}
+                onChange={handleChange}
+                style={{
+                  flex: '1 1 250px',
+                  padding: '15px',
+                  borderRadius: '8px',
+                  border: '1px solid #ddd',
+                  fontSize: '16px',
+                  outline: 'none',
+                }}
+              />
+            </div>
+            <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Phone Number *"
+                required
+                value={formData.phone}
+                onChange={handleChange}
+                style={{
+                  flex: '1 1 250px',
+                  padding: '15px',
+                  borderRadius: '8px',
+                  border: '1px solid #ddd',
+                  fontSize: '16px',
+                  outline: 'none',
+                }}
+              />
+              <input
+                type="text"
+                name="city"
+                placeholder="City / Location *"
+                required
+                value={formData.city}
+                onChange={handleChange}
+                style={{
+                  flex: '1 1 250px',
+                  padding: '15px',
+                  borderRadius: '8px',
+                  border: '1px solid #ddd',
+                  fontSize: '16px',
+                  outline: 'none',
+                }}
+              />
+            </div>
+            <input
+              type="text"
+              name="budget"
+              placeholder="Investment Budget (Optional)"
+              value={formData.budget}
+              onChange={handleChange}
+              style={{
+                padding: '15px',
+                borderRadius: '8px',
+                border: '1px solid #ddd',
+                fontSize: '16px',
+                outline: 'none',
+              }}
+            />
+            <textarea
+              name="message"
+              placeholder="Tell us about yourself and why you're interested in the Grande Cines franchise..."
+              rows={5}
+              value={formData.message}
+              onChange={handleChange}
+              style={{
+                padding: '15px',
+                borderRadius: '8px',
+                border: '1px solid #ddd',
+                fontSize: '16px',
+                outline: 'none',
+                resize: 'vertical',
+              }}
+            />
+            {status.error && (
+              <p style={{ color: '#f44336', textAlign: 'center' }}>
+                Something went wrong. Please try again.
+              </p>
+            )}
+            <button
+              type="submit"
+              disabled={status.loading}
+              style={{
+                padding: '15px 30px',
+                backgroundColor: status.loading ? '#ccc' : '#f5c518',
+                color: '#000',
+                border: 'none',
+                borderRadius: '8px',
+                fontSize: '18px',
+                fontWeight: 'bold',
+                cursor: status.loading ? 'not-allowed' : 'pointer',
+                transition: 'transform 0.2s, box-shadow 0.2s',
+              }}
+              onMouseOver={(e) => {
+                if (!status.loading) {
+                  e.target.style.transform = 'scale(1.02)';
+                  e.target.style.boxShadow = '0 4px 15px rgba(245, 197, 24, 0.4)';
+                }
+              }}
+              onMouseOut={(e) => {
+                e.target.style.transform = 'scale(1)';
+                e.target.style.boxShadow = 'none';
+              }}
+            >
+              {status.loading ? 'Sending...' : 'Submit Franchise Enquiry'}
+            </button>
+          </form>
+        )}
       </motion.div>
     </motion.div>
   );
