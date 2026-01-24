@@ -82,9 +82,9 @@ export default function Home() {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <h1>Welcome to Grande Cines</h1>
-        <p style={{ fontSize: '1.3em', marginBottom: '10px' }}>Guwahati's First & Only Curved Screen Cinema</p>
-        <p style={{ fontSize: '1.1em', marginBottom: '30px', color: '#666' }}>Experience cinema like never before with cutting-edge technology and ultimate comfort</p>
+        <h1>WELCOME TO GRANDE CINES</h1>
+        <p style={{ fontSize: '1.3em', marginBottom: '10px' }}>Guwahati's First & Only Curved Screen Multiplex</p>
+        <p style={{ fontSize: '1.1em', marginBottom: '30px', color: '#666' }}>Experience cinema like never before. <br/> Cutting-edge technology, plush comfortable seating, great food and affordable prices located at the heart of Guwahati city.</p>
         <img src="/hall.avif" alt="Movie Theater" />
       </motion.div>
 
