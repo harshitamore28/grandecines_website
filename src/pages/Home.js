@@ -196,10 +196,10 @@ export default function Home() {
         </motion.div>
         <motion.div className="stat-card" variants={bounceVariants}>
           <p className="number">Recliner</p>
-          <p>Neck pillow</p>
+          <p>Seats</p>
         </motion.div>
         <motion.div className="stat-card" variants={bounceVariants}>
-          <p className="number">Restaurant</p>
+          <p className="number">Eatery</p>
           <p>In-house</p>
         </motion.div>
         <motion.div className="stat-card" variants={bounceVariants}>
@@ -207,12 +207,12 @@ export default function Home() {
           <p>Ticket Booking</p>
         </motion.div>
         <motion.div className="stat-card" variants={bounceVariants}>
-          <p className="number">Food</p>
-          <p>Order from Seat</p>
+          <p className="number">Mobile App</p>
+          <p>On Seat Delivery</p>
         </motion.div>
       </motion.div>
 
-      <motion.h2
+      {/* <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -251,7 +251,7 @@ export default function Home() {
             </motion.div>
           ))}
         </motion.div>
-      )}
+      )} */}
 
       <motion.div
         // className="feature-section"
