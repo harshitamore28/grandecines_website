@@ -191,8 +191,8 @@ export default function Home() {
           <p>Customer Satisfaction</p>
         </motion.div>
         <motion.div className="stat-card" variants={bounceVariants}>
-          <p className="number">5000+</p>
-          <p>Patrons Served</p>
+          <p className="number">20,00,000+</p>
+          <p>Smiles and counting</p>
         </motion.div>
         <motion.div className="stat-card" variants={bounceVariants}>
           <p className="number">Recliner</p>
