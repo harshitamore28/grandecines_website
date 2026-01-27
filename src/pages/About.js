@@ -217,21 +217,21 @@ export default function About() {
         viewport={{ once: true }}
       >
         <motion.div className="card" variants={itemVariants} whileHover={{ scale: 1.05 }}>
-          <img src="gallery_1.png" alt="Curved Screen" />
+          <img src="gallery_1.jpg" alt="Curved Screen" loading="lazy" />
           {/* <div className="card-content">
             <h3>Curved Screen Technology</h3>
             <p>The only curved screen in Guwahati for an unmatched immersive cinematic experience.</p>
           </div> */}
         </motion.div>
         <motion.div className="card" variants={itemVariants} whileHover={{ scale: 1.05 }}>
-          <img src="gallery_2.png" alt="Dolby Sound" />
+          <img src="gallery_2.jpg" alt="Dolby Sound" loading="lazy" />
           {/* <div className="card-content">
             <h3>Dolby Atmos Sound</h3>
             <p>World-class Dolby Atmos surround sound for crystal clear audio from every angle.</p>
           </div> */}
         </motion.div>
         <motion.div className="card" variants={itemVariants} whileHover={{ scale: 1.05 }}>
-          <img src="gallery_3.png"alt="Premium Seats" />
+          <img src="gallery_3.jpg" alt="Premium Seats" loading="lazy" />
           {/* <div className="card-content">
             <h3>Luxury Recliner Seats</h3>
             <p>Premium reclining seats with ample legroom for ultimate comfort during long movies.</p>
