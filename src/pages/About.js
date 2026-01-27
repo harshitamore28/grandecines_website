@@ -112,7 +112,7 @@ export default function About() {
           <div style={{ fontSize: '3em', marginBottom: '15px' }}>🎯</div>
           <h3 style={{ color: '#f5c518', marginBottom: '15px', fontSize: '1.5em' }}>Vision</h3>
           <p style={{ color: '#ccc', lineHeight: '1.8' }}>
-            To be the most loved and preferred cinema destination in Northeast India, setting new benchmarks in entertainment excellence. We envision Grande Cines as a place where technology meets comfort, where every movie becomes an unforgettable journey, and where families and friends create lasting memories together.
+           We started Grande Cines with the goal to redefine the movie experience of the movie lovers by making premium facilities accessible and sustainable at scale. We believe that world class experiences should not be limited to luxury price points, and that affordability and excellence, both can coexist when driven by the right processes, partnerships, and discipline.<br/><br/>We are committed in delivering uncompromised standards across every touchpoint with cutting-edge audio and visual technology, thoughtfully designed spaces, and F&B offerings that is aligned with international benchmarks. Our culinary philosophy is rooted in quality without any shortcuts and cost cutting, using the best raw materials and imported seasonings to ensure consistency, taste, and brand trust among our patrons.
           </p>
         </motion.div>
 
@@ -130,7 +130,7 @@ export default function About() {
           <div style={{ fontSize: '3em', marginBottom: '15px' }}>🚀</div>
           <h3 style={{ color: '#f5c518', marginBottom: '15px', fontSize: '1.5em' }}>Mission</h3>
           <p style={{ color: '#ccc', lineHeight: '1.8' }}>
-            To deliver world-class cinematic experiences through innovative technology, exceptional hospitality, and unwavering commitment to customer satisfaction. We strive to make every visit special by offering premium facilities, diverse entertainment options, and creating an inclusive environment where everyone can enjoy the magic of movies.
+           Our mission is to build and expand Grande Cines as a cinema exhibition brand that consistently delivers premium yet affordable experience across India. We aim to achieve this through a disciplined expansion strategy focused on operational excellence, standardisation, and strong unit-level profitability for the investors.<br/><br/>We are committed to replicating our core strengths superior movie experience, high quality F&B offerings made with uncompromised ingredients, and customer-centric service, across every location. By establishing robust systems, reliable supply chains, and strong local execution teams, we ensure uniform quality while scaling efficiently.<br/><br/>As we grow, our mission is to create a future-ready cinema platform that adapts to evolving audience preferences, leverages technology to improve efficiency, and builds long-term value for the stakeholders. Through responsible growth and strategic partnerships, we seek to position ourselves as a trusted national cinema brand with sustainable returns.
           </p>
         </motion.div>
       </motion.div>
@@ -217,21 +217,21 @@ export default function About() {
         viewport={{ once: true }}
       >
         <motion.div className="card" variants={itemVariants} whileHover={{ scale: 1.05 }}>
-          <img src="https://images.unsplash.com/photo-1595769816263-9b910be24d5f?w=400&h=300&fit=crop" alt="Curved Screen" />
+          <img src="gallery_1.png" alt="Curved Screen" />
           {/* <div className="card-content">
             <h3>Curved Screen Technology</h3>
             <p>The only curved screen in Guwahati for an unmatched immersive cinematic experience.</p>
           </div> */}
         </motion.div>
         <motion.div className="card" variants={itemVariants} whileHover={{ scale: 1.05 }}>
-          <img src="https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?w=400&h=300&fit=crop" alt="Dolby Sound" />
+          <img src="gallery_2.png" alt="Dolby Sound" />
           {/* <div className="card-content">
             <h3>Dolby Atmos Sound</h3>
             <p>World-class Dolby Atmos surround sound for crystal clear audio from every angle.</p>
           </div> */}
         </motion.div>
         <motion.div className="card" variants={itemVariants} whileHover={{ scale: 1.05 }}>
-          <img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?w=400&h=300&fit=crop" alt="Premium Seats" />
+          <img src="gallery_3.png"alt="Premium Seats" />
           {/* <div className="card-content">
             <h3>Luxury Recliner Seats</h3>
             <p>Premium reclining seats with ample legroom for ultimate comfort during long movies.</p>
