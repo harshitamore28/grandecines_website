@@ -81,8 +81,8 @@ export default function About() {
         viewport={{ once: true }}
       >
         {/* <h3>About Grande Cines</h3> */}
-        <p>Grande Cines is Guwahati's premier cinema destination, offering an unparalleled movie-watching experience in the heart of Assam. Established with the goal of revolutionizing entertainment in Northeast India, we are proud to be the first and only cinema in Guwahati to feature a state-of-the-art curved screen.</p>
-        <p style={{ marginTop: '15px' }}>Located in the bustling Paltan Bazar area, Grande Cines combines cutting-edge technology with luxurious comfort. Our two world-class auditoriums are equipped with Dolby Atmos sound systems, 4K laser projection, and premium recliner seating with neck pillows - ensuring every visit is a memorable experience. From the latest Bollywood blockbusters to Hollywood hits and regional cinema, we bring the best of entertainment to our patrons.</p>
+        <p>Grande Cines is a contemporary cinema exhibition brand focused on delivering a refined and comfortable movie watching experience. Emphasising on superior presentation, thoughtfully designed spaces, and a high-quality F&B offerings, Grande Cines is built around attention to detail and consistency.</p>
+        <p style={{ marginTop: '15px' }}>Our brand blends modern cinema technology with a strong understanding of audience expectations, creating an environment where storytelling, comfort, and service come together seamlessly to enhance the customer’s experience.</p>
       </motion.div>
 
       {/* Vision & Mission Section */}
@@ -152,11 +152,12 @@ export default function About() {
           viewport={{ once: true }}
         >
           {[
-            { icon: '✨', value: 'Excellence' },
+            { icon: '💯', value: 'Excellence' },
             { icon: '🤝', value: 'Customer First' },
-            { icon: '💡', value: 'Innovation' },
-            { icon: '🎭', value: 'Entertainment' },
-            { icon: '❤️', value: 'Passion' },
+            { icon: '🍿', value: 'Quality F&B' },
+            { icon: '✌', value: 'Comfort' },
+            { icon: '🥇', value: 'Trust' },
+            { icon: '💡', value: 'Consistency' },
           ].map((item, index) => (
             <motion.div
               key={index}
@@ -246,21 +247,21 @@ export default function About() {
         viewport={{ once: true }}
       >
         <motion.div className="card" variants={itemVariants} whileHover={{ scale: 1.05 }}>
-          <img src="https://images.unsplash.com/photo-1595769816263-9b910be24d5f?w=400&h=300&fit=crop" alt="Curved Screen" />
+          <img src="gallery_4.jpeg" alt="Curved Screen" />
           {/* <div className="card-content">
             <h3>Curved Screen Technology</h3>
             <p>The only curved screen in Guwahati for an unmatched immersive cinematic experience.</p>
           </div> */}
         </motion.div>
         <motion.div className="card" variants={itemVariants} whileHover={{ scale: 1.05 }}>
-          <img src="https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?w=400&h=300&fit=crop" alt="Dolby Sound" />
+          <img src="gallery_5.jpeg" alt="Dolby Sound" />
           {/* <div className="card-content">
             <h3>Dolby Atmos Sound</h3>
             <p>World-class Dolby Atmos surround sound for crystal clear audio from every angle.</p>
           </div> */}
         </motion.div>
         <motion.div className="card" variants={itemVariants} whileHover={{ scale: 1.05 }}>
-          <img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?w=400&h=300&fit=crop" alt="Premium Seats" />
+          <img src="gallery_6.jpeg" alt="Premium Seats" />
           {/* <div className="card-content">
             <h3>Luxury Recliner Seats</h3>
             <p>Premium reclining seats with ample legroom for ultimate comfort during long movies.</p>

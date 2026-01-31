@@ -69,27 +69,27 @@ export default function Home() {
   };
   const testimonials = [
     {
-      name: "Jerico",
-      type: "Corporate Event",
-      quote: "We booked Grande Cines for our annual company gathering and it was an unforgettable experience! The curved screen made our presentation look spectacular, and the team was incredibly professional. Highly recommend for corporate events!",
+      name: "Shakshi Jain, President",
+      type: "Leo Club of Guwahati Parvarish",
+      quote: "Thank you team Grande Cines so much for allowing us to organise the movie screening of Dhurandhar. It was truly a wonderful experience for our club to work with the Grande Cines management as a team. Your cooperation, support, and service were truly commendable. Looking forward to many more such collaborations in the future.",
+      rating: 5,
+    },
+     {
+      name: "JCI Ignite",
+      type: "Guwahati",
+      quote: "It was a fantastic evening organized by JCI Guwahati Ignite. The atmosphere at Grand Cines was energetic, the seats were plush, and the food especially the popcorn was the perfect accompaniment to such a powerful film!",
       rating: 5,
     },
     {
-      name: "JCI Guwahati",
-      type: "Leadership Summit",
-      quote: "JCI Guwahati organized our Leadership Summit at Grande Cines. The premium facilities, Dolby Atmos sound, and comfortable seating made it perfect for our 150+ members. The staff went above and beyond to accommodate our needs.",
+      name: "Neha Agarwal, President",
+      type: "Lions Club of Guwahati Parvarish",
+      quote: `Our experience at Grand Cines for the screening of Border 2 was truly wonderful and seamless from start to finish. The booking process was smooth, well-managed, and professionally handled, which made planning the event completely stress-free. <br>The service was excellent—courteous, prompt, and very well coordinated. The staff was extremely supportive and cooperative throughout, always available to assist with a smile and ensuring everything ran on time. <br> The food quality was impressive—fresh, tasty, and well-served, adding great value to the overall experience.<br> Overall, Grand Cines delivered a comfortable, memorable, and well-organized experience. We truly appreciate the professionalism and warm hospitality of the entire team and look forward to many more successful associations in the future.`,
       rating: 5,
     },
     {
-      name: "Lions Club",
-      type: "Charity Screening",
-      quote: "We hosted a charity movie screening for underprivileged children at Grande Cines. The management was extremely supportive and provided excellent service. The kids were amazed by the curved screen experience!",
-      rating: 5,
-    },
-    {
-      name: "Marwari Yuva Manch",
-      type: "Community Celebration",
-      quote: "Marwari Yuva Manch booked the entire hall for a special community movie night. From booking to execution, everything was seamless. The curved screen technology and luxury seating made it a memorable event for all our members.",
+      name: "JCI Princess",
+      type: "Guwahati",
+      quote: "Our experience with the Border 2 screening was truly wonderful. From the very beginning, the coordination and booking process was smooth and well-managed. <br> The service provided by your team was excellent, very cooperative, prompt, and supportive throughout the screening. The staff was extremely courteous and helpful, ensuring everything ran seamlessly and that our guests were comfortable at all times. <br> The food quality was good and well-received by the audience, and the arrangements were neatly organized. Overall, the professionalism and hospitality shown by your entire team played a big role in making our fundraising movie screening a successful and memorable experience.<br>Thank you for your support and cooperation. We look forward to associating with you again in the future. ",
       rating: 5,
     },
   ];
@@ -289,9 +289,10 @@ export default function Home() {
                   >
                     <div className="card-content" style={{ padding: '25px' }}>
                       <div style={{ fontSize: '2em', marginBottom: '10px', color: '#f5c518' }}>❝</div>
-                      <p style={{ fontStyle: 'italic', color: '#555', lineHeight: '1.6', marginBottom: '15px' }}>
-                        {testimonials[index].quote}
-                      </p>
+                      <p
+                        style={{ fontStyle: 'italic', color: '#555', lineHeight: '1.6', marginBottom: '15px' }}
+                        dangerouslySetInnerHTML={{ __html: testimonials[index].quote }}
+                      />
                       <div style={{ borderTop: '1px solid #eee', paddingTop: '15px', marginTop: '15px' }}>
                         <h3 style={{ color: '#1a1a2e', marginBottom: '5px' }}>{testimonials[index].name}</h3>
                         <p style={{ color: '#f5c518', fontWeight: 'bold', fontSize: '0.9em' }}>{testimonials[index].type}</p>
