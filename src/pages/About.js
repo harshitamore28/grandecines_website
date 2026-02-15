@@ -153,11 +153,11 @@ export default function About() {
         >
           {[
             { icon: '💯', value: 'Excellence' },
-            { icon: '🤝', value: 'Customer First' },
+            { icon: '👥', value: 'Customer First' },
             { icon: '🍿', value: 'Quality F&B' },
-            { icon: '✌', value: 'Comfort' },
-            { icon: '🥇', value: 'Trust' },
-            { icon: '💡', value: 'Consistency' },
+            { icon: '😌', value: 'Comfort' },
+            { icon: '🤝', value: 'Trust' },
+            { icon: '😇', value: 'Consistency' },
           ].map((item, index) => (
             <motion.div
               key={index}
@@ -247,14 +247,14 @@ export default function About() {
         viewport={{ once: true }}
       >
         <motion.div className="card" variants={itemVariants} whileHover={{ scale: 1.05 }}>
-          <img src="gallery_4.jpeg" alt="Curved Screen" />
+          <img src="gallery_5.jpeg" alt="Curved Screen" />
           {/* <div className="card-content">
             <h3>Curved Screen Technology</h3>
             <p>The only curved screen in Guwahati for an unmatched immersive cinematic experience.</p>
           </div> */}
         </motion.div>
         <motion.div className="card" variants={itemVariants} whileHover={{ scale: 1.05 }}>
-          <img src="gallery_5.jpeg" alt="Dolby Sound" />
+          <img src="gallery_4.jpeg" alt="Dolby Sound" />
           {/* <div className="card-content">
             <h3>Dolby Atmos Sound</h3>
             <p>World-class Dolby Atmos surround sound for crystal clear audio from every angle.</p>

@@ -203,9 +203,9 @@ export default function Contactus() {
             }}
           >
             <span style={{ fontSize: '1.5em' }}>▶️</span>
-            <div>
+            {/* <div>
               <div>Android</div>
-            </div>
+            </div> */}
           </motion.a>
           <motion.a
             href="https://apps.apple.com/in/app/grandecines/id6752354256"
@@ -226,9 +226,9 @@ export default function Contactus() {
             }}
           >
             <img src="/apple.png" alt="Apple Logo" style={{ width: '24px', height: '30px' }} />
-            <div>
+            {/* <div>
               <div style={{ fontSize: '0.7em', opacity: 0.8 }}>Apple</div>
-            </div>
+            </div> */}
           </motion.a>
         </div>
       </motion.div>
