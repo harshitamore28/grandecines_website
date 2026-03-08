@@ -112,7 +112,7 @@ export default function Movies() {
               whileHover={{ scale: 1.05 }}
               transition={{ type: 'spring', stiffness: 300 }}
             >
-              <img src={movie.poster} alt={movie.name} />
+              <img src={movie.poster} alt={movie.name} style={{objectFit:'contain'}}/>
               <div className="card-content">
                 <h3>{movie.name}</h3>
                 <p style={{ color: "#f5c518", fontWeight: "bold" }}>{movie.upcomingRelease}</p>
@@ -176,7 +176,7 @@ export default function Movies() {
                     variants={itemVariants}
                     whileHover={{ scale: 1.05 }}
                   >
-                    <img src={movie.poster} alt={movie.name} />
+                    <img src={movie.poster} alt={movie.name}  style={{objectFit:'contain'}}/>
                     <div className="card-content">
                       <h3>{movie.name}</h3>
                       <p style={{ color: '#f5c518', fontWeight: 'bold', marginTop: '10px' }}>Release Date: {formatReleaseDate(movie.release)}</p>

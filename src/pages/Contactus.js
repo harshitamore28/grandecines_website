@@ -125,8 +125,8 @@ export default function Contactus() {
             <span style={{ fontSize: '3em' }}>✉️</span>
             <h3 style={{ marginTop: '15px', color: '#1a1a2e' }}>Email</h3>
             <p style={{ color: '#555', marginTop: '10px' }}>
-              <a href="mailto:jalanrishabh1@gmail.com" style={{ color: '#f5c518', textDecoration: 'none', fontWeight: 'bold' }}>
-                jalanrishabh1@gmail.com
+              <a href="mailto:grandecines.rishabhjalan@gmail.com" style={{ color: '#f5c518', textDecoration: 'none', fontWeight: 'bold' }}>
+                grandecines.rishabhjalan@gmail.com
               </a>
             </p>
           </div>
@@ -202,7 +202,7 @@ export default function Contactus() {
               fontWeight: 'bold',
             }}
           >
-            <span style={{ fontSize: '1.5em' }}>▶️</span>
+            <img src="/android.png" alt="Android Logo" style={{ width: '30px', height: '36px' }} />
             {/* <div>
               <div>Android</div>
             </div> */}
@@ -389,7 +389,7 @@ export default function Contactus() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={() => window.location.href = 'mailto:jalanrishabh1@gmail.com?subject=Application for ' + job.title}
+                onClick={() => window.location.href = 'mailto:grandecines.rishabhjalan@gmail.com?subject=Application for ' + job.title}
                 style={{
                   padding: '10px 20px',
                   background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)',

@@ -60,7 +60,10 @@ export default function About() {
       viewport={{ once: true }}
     >
       <h1 style={{textAlign:'center'}}>ABOUT GRANDE CINES</h1>
-
+      <div style={{ textAlign: 'center' }}>
+         <img src="/main_logo.png" alt="GrandeCines Logo" style={{ width: '160px', height: '160px' }} />
+      </div>
+      
       <motion.div
         className="hero"
         initial={{ opacity: 0, y: 40 }}

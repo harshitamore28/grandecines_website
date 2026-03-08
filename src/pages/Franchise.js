@@ -92,20 +92,20 @@ export default function Franchise() {
         viewport={{ once: true }}
       >
         <h3>FRANCHISE OPPORTUNITY</h3>
-        {/* <p>Our flagship <strong>Curved Screen Technology</strong> has made Grande Cines a household name in Guwahati. As a franchise partner, you'll have exclusive rights to bring this unique cinema experience to your region - setting your theater apart from all competition.</p> */}
-      </motion.div>
-      <h1 style={{textAlign:'center'}}>WHY US?</h1>
-      {/* <p>Bring Guwahati's Famous Curved Screen Cinema Experience to Your City</p> */}
-
-      {/* <motion.div
+        <motion.div
         className="hero"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=900&h=500&fit=crop" alt="Cinema Franchise" />
-      </motion.div> */}
+        <img src="./franchise_1.jpg" alt="Cinema Franchise" />
+      </motion.div>
+
+        {/* <p>Our flagship <strong>Curved Screen Technology</strong> has made Grande Cines a household name in Guwahati. As a franchise partner, you'll have exclusive rights to bring this unique cinema experience to your region - setting your theater apart from all competition.</p> */}
+      </motion.div>
+      <h1 style={{textAlign:'center'}}>WHY US?</h1>
+      {/* <p>Bring Guwahati's Famous Curved Screen Cinema Experience to Your City</p> */}
 
       
 
@@ -116,8 +116,8 @@ export default function Franchise() {
         variants={slideFromRightVariants}
         viewport={{ once: true }}
       >
-        <h3>Why Franchise with Grande Cines?</h3>
-        <p>Grande Cines has revolutionized cinema experience in Northeast India with our signature curved screen. Our franchise partners enjoy a unique market advantage, sustainable growth, comprehensive support, and access to the same technology that made us Guwahati's most talked-about cinema.</p>
+        {/* <h3>Why Franchise with Grande Cines?</h3> */}
+        <p>We at Grande Cines combine strong industry understanding with a passion for delivering a premium cinema experience to the visitors. As a locally rooted brand from Assam, we understand the pulse of regional audiences while adopting modern exhibition standards. Our franchise model is designed to be practical, transparent, and investor-friendly, offering operational support, branding strength, and a proven approach to cinema management. With our focus on affordable yet high quality multiplex development, strategic locations, and efficient operations, we aim to build profitable exhibition while expanding quality movie watching experience across emerging markets. Partnering with Grande Cines means growing with a brand that values long-term relationships, sustainable expansion, and consistent audience engagement.</p>
       </motion.div>
 
       <motion.h2
