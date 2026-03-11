@@ -59,12 +59,13 @@ export default function About() {
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
     >
-      <h1 style={{textAlign:'center'}}>ABOUT GRANDE CINES</h1>
-      <div style={{ textAlign: 'center' }}>
-         <img src="/main_logo.png" alt="GrandeCines Logo" style={{ width: '160px', height: '160px' }} />
+      <h1 style={{textAlign:'center', fontSize:'4rem',marginBottom:'-3rem'}}>GRANDE CINES</h1>
+      <p style={{textAlign:'center', marginBottom:'-2rem', fontSize: '2em', fontStyle: 'italic'}}>...where stories come alive.</p>
+      <div style={{ textAlign: 'center',marginBottom:'-7rem' }}>
+         <img src="/main_logo.png" alt="GrandeCines Logo" style={{ width: '44%', height: '10%' }} />
       </div>
       
-      <motion.div
+      {/* <motion.div
         className="hero"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -72,20 +73,23 @@ export default function About() {
         viewport={{ once: true }}
       >
         <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=900&h=500&fit=crop" alt="Cinema Hall" />
-      </motion.div>
+      </motion.div> */}
 
       {/* About Grande Cines Section */}
       <motion.div
-        className="feature-section"
-        style={{ borderLeft: '4px solid #f5c518' }}
+      //  ÷\ className="feature-section"
+        // style={{ borderLeft: '4px solid #f5c518' }}
         initial="hidden"
         whileInView="visible"
         variants={slideFromLeftVariants}
         viewport={{ once: true }}
       >
         {/* <h3>About Grande Cines</h3> */}
-        <p>Grande Cines is a contemporary cinema exhibition brand focused on delivering a refined and comfortable movie watching experience. Emphasising on superior presentation, thoughtfully designed spaces, and a high-quality F&B offerings, Grande Cines is built around attention to detail and consistency.</p>
-        <p style={{ marginTop: '15px' }}>Our brand blends modern cinema technology with a strong understanding of audience expectations, creating an environment where storytelling, comfort, and service come together seamlessly to enhance the customer’s experience.</p>
+        <p style={{ display:'flex',justifyContent:'space-between', marginTop: '15px' }}>Welcome to Grande Cines, a homegrown cinema brand proudly based in Guwahati, Assam. Built with a vision to elevate the movie going experience in Northeast India, Grande Cines combines modern cinema technology with comfortable seating, and thoughtfully designed spaces to create an immersive entertainment destination for audiences of all ages.</p>
+
+<p style={{ marginTop: '15px' }}>We at Grande Cines believe that cinema is more than just watching a film. It is about the experience, the atmosphere, and the emotions shared with fellow movie lovers. Our special curved screens are designed to deliver exceptional picture quality and comfortable viewing from any angle with Dolby 7.1 immersive sound, ensuring every show is engaging, vibrant, and memorable.</p>
+
+<p style={{ marginTop: '15px' }}>As a local brand from Assam, our aim is not only to showcase the best of global cinema but also to support and promote regional stories and talent. With a focus on quality, affordability, and innovation, we are committed in bringing world class entertainment closer to communities across the region.</p>
       </motion.div>
 
       {/* Vision & Mission Section */}
@@ -112,7 +116,7 @@ export default function About() {
             boxShadow: '0 10px 30px rgba(0,0,0,0.2)',
           }}
         >
-          <div style={{ fontSize: '3em', marginBottom: '15px' }}>🎯</div>
+          {/* <div style={{ fontSize: '3em', marginBottom: '15px' }}>🎯</div> */}
           <h3 style={{ color: '#f5c518', marginBottom: '15px', fontSize: '1.5em' }}>Vision</h3>
           <p style={{ color: '#ccc', lineHeight: '1.8' }}>
            We started Grande Cines with the goal to redefine the movie experience of the movie lovers by making premium facilities accessible and sustainable at scale. We believe that world class experiences should not be limited to luxury price points, and that affordability and excellence, both can coexist when driven by the right processes, partnerships, and discipline.<br/><br/>We are committed in delivering uncompromised standards across every touchpoint with cutting-edge audio and visual technology, thoughtfully designed spaces, and F&B offerings that is aligned with international benchmarks. Our culinary philosophy is rooted in quality without any shortcuts and cost cutting, using the best raw materials and imported seasonings to ensure consistency, taste, and brand trust among our patrons.
@@ -130,7 +134,7 @@ export default function About() {
             boxShadow: '0 10px 30px rgba(0,0,0,0.2)',
           }}
         >
-          <div style={{ fontSize: '3em', marginBottom: '15px' }}>🚀</div>
+          {/* <div style={{ fontSize: '3em', marginBottom: '15px' }}>🚀</div> */}
           <h3 style={{ color: '#f5c518', marginBottom: '15px', fontSize: '1.5em' }}>Mission</h3>
           <p style={{ color: '#ccc', lineHeight: '1.8' }}>
            Our mission is to build and expand Grande Cines as a cinema exhibition brand that consistently delivers premium yet affordable experience across India. We aim to achieve this through a disciplined expansion strategy focused on operational excellence, standardisation, and strong unit-level profitability for the investors.<br/><br/>We are committed to replicating our core strengths superior movie experience, high quality F&B offerings made with uncompromised ingredients, and customer-centric service, across every location. By establishing robust systems, reliable supply chains, and strong local execution teams, we ensure uniform quality while scaling efficiently.<br/><br/>As we grow, our mission is to create a future-ready cinema platform that adapts to evolving audience preferences, leverages technology to improve efficiency, and builds long-term value for the stakeholders. Through responsible growth and strategic partnerships, we seek to position ourselves as a trusted national cinema brand with sustainable returns.

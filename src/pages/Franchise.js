@@ -82,16 +82,16 @@ export default function Franchise() {
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
     >
-      <h1 style={{textAlign:'center'}}>PARTNER WITH US</h1>
+      <h1 style={{textAlign:'center'}}>BRING GRANDE CINES TO YOUR CITY</h1>
       <motion.div
-        className="feature-section"
-        style={{ borderLeft: '4px solid #f5c518' }}
+        // className="feature-section"
+        // style={{ borderLeft: '4px solid #f5c518' }}
         initial="hidden"
         whileInView="visible"
         variants={slideFromLeftVariants}
         viewport={{ once: true }}
       >
-        <h3>FRANCHISE OPPORTUNITY</h3>
+        {/* <h3>FRANCHISE OPPORTUNITY</h3> */}
         <motion.div
         className="hero"
         initial={{ opacity: 0, y: 40 }}
