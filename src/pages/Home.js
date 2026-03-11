@@ -111,7 +111,7 @@ export default function Home() {
         <h1>WELCOME TO GRANDE CINES</h1>
         <p style={{ fontSize: '1.3em', marginBottom: '10px' }}>Guwahati's First & Only Curved Screen Multiplex</p>
         <p style={{ fontSize: '1.1em', marginBottom: '30px', color: '#666' }}>Experience cinema like never before. <br/> Cutting-edge technology, plush comfortable seating, great food and affordable prices located at the heart of Guwahati city.</p>
-        <img src="/hall.avif" alt="Movie Theater" />
+        <img src="/hall.jpg" alt="Movie Theater" />
       </motion.div>
 
       {/* Top 3 Rated Badge Section */}
