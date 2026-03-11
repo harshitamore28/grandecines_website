@@ -190,7 +190,7 @@ export default function Franchise() {
         </motion.div>
       </motion.div>
 
-      <motion.div
+      {/* <motion.div
         className="feature-section"
         initial="hidden"
         whileInView="visible"
@@ -202,7 +202,7 @@ export default function Franchise() {
         <p><strong>Unique Selling Point:</strong> Curved Screen Technology - First in your region!</p>
         <p style={{ marginTop: '20px' }}><strong>What's Included:</strong></p>
         <p>✓ Curved screen installation and setup<br/>✓ 4K Projection and Dolby Atmos sound systems<br/>✓ Complete theater design and construction guidance<br/>✓ Staff training and recruitment support<br/>✓ Marketing and launch campaign support<br/>✓ Ongoing operational and technical assistance</p>
-      </motion.div>
+      </motion.div> */}
 
       <motion.div
         className="feature-section"
