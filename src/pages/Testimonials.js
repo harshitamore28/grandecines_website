@@ -81,7 +81,7 @@ export default function Testimonials() {
 
       <motion.div
         className="feature-section"
-        style={{ borderLeft: '4px solid #f5c518' }}
+        style={{ borderLeft: '4px solid #ecc449' }}
         initial="hidden"
         whileInView="visible"
         variants={slideFromLeftVariants}
@@ -108,16 +108,16 @@ export default function Testimonials() {
             style={{ background: 'rgba(255, 255, 255, 0.9)' }}
           >
             <div className="card-content" style={{ padding: '25px' }}>
-              <div style={{ fontSize: '2em', marginBottom: '10px', color: '#f5c518' }}>❝</div>
+              <div style={{ fontSize: '2em', marginBottom: '10px', color: '#ecc449' }}>❝</div>
               <p style={{ fontStyle: 'italic', color: '#555', lineHeight: '1.6', marginBottom: '15px' }}>
                 {testimonial.quote}
               </p>
               <div style={{ borderTop: '1px solid #eee', paddingTop: '15px', marginTop: '15px' }}>
                 <h3 style={{ color: '#1a1a2e', marginBottom: '5px' }}>{testimonial.name}</h3>
-                <p style={{ color: '#f5c518', fontWeight: 'bold', fontSize: '0.9em' }}>{testimonial.type}</p>
+                <p style={{ color: '#ecc449', fontWeight: 'bold', fontSize: '0.9em' }}>{testimonial.type}</p>
                 <div style={{ marginTop: '10px' }}>
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <span key={i} style={{ color: '#f5c518', fontSize: '1.2em' }}>★</span>
+                    <span key={i} style={{ color: '#ecc449', fontSize: '1.2em' }}>★</span>
                   ))}
                 </div>
               </div>
@@ -200,7 +200,7 @@ export default function Testimonials() {
               }}
             >
               <span style={{ fontSize: '2.5em', marginBottom: '10px' }}>{brand.icon}</span>
-              <span style={{ color: '#f5c518', fontWeight: 'bold', fontSize: '0.9em' }}>{brand.name}</span>
+              <span style={{ color: '#ecc449', fontWeight: 'bold', fontSize: '0.9em' }}>{brand.name}</span>
             </motion.div>
           ))}
         </motion.div>

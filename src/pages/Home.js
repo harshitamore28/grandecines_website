@@ -129,7 +129,7 @@ export default function Home() {
           position: 'relative',
           overflow: 'hidden',
           boxShadow: '0 10px 40px rgba(245, 197, 24, 0.3)',
-          border: '2px solid #f5c518',
+          border: '2px solid #ecc449',
         }}
       >
         {/* Decorative elements */}
@@ -159,7 +159,7 @@ export default function Home() {
           viewport={{ once: true }}
           style={{
             display: 'inline-block',
-            background: 'linear-gradient(135deg, #f5c518 0%, #ffd700 50%, #f5c518 100%)',
+            background: 'linear-gradient(135deg, #ecc449 0%, #ffd700 50%, #ecc449 100%)',
             padding: '15px 30px',
             borderRadius: '50px',
             marginBottom: '20px',
@@ -181,7 +181,7 @@ export default function Home() {
           Comes under 3 Best Movie Theatres in Guwahati, Assam
           <br/>
           <br/>
-          <a target="_blank" href="https://threebestrated.in/movie-theatres-in-guwahati-assam" style={{ color: '#f5c518', textDecoration: 'none', marginLeft: '10px' }}>
+          <a target="_blank" href="https://threebestrated.in/movie-theatres-in-guwahati-assam" style={{ color: '#ecc449', textDecoration: 'none', marginLeft: '10px' }}>
             View on ThreeBestRated
           </a>
         </motion.h2> */}
@@ -193,7 +193,7 @@ export default function Home() {
           viewport={{ once: true }}
           style={{ color: '#ccc', fontSize: '1.1em', marginBottom: '20px' }}
         >
-          Proudly ranked among the <a style={{ color: '#f5c518', fontWeight: 'bold' }}target="_blank" href="https://threebestrated.in/movie-theatres-in-guwahati-as">Top 3 Best Rated Movie Theatres</a> in Guwahati
+          Proudly ranked among the <a style={{ color: '#ecc449', fontWeight: 'bold' }}target="_blank" href="https://threebestrated.in/movie-theatres-in-guwahati-as">Top 3 Best Rated Movie Theatres</a> in Guwahati
         </motion.p>
       </motion.div>
       <h1 style={{textAlign:'center'}}>WHY CHOOSE US?</h1>
@@ -252,7 +252,7 @@ export default function Home() {
               onClick={() => setCurrentTestimonial((prev) => (prev === 0 ? testimonials.length - 2 : prev - 2))}
               style={{
                 background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)',
-                border: '2px solid #f5c518',
+                border: '2px solid #ecc449',
                 borderRadius: '50%',
                 width: '50px',
                 height: '57px',
@@ -261,14 +261,14 @@ export default function Home() {
                 alignItems: 'center',
                 justifyContent: 'center',
                 fontSize: '1.5em',
-                // color: '#f5c518',
+                // color: '#ecc449',
                 transition: 'all 0.3s ease',
                 flexShrink: 0
               }}
-              onMouseOver={(e) => e.currentTarget.style.background = '#f5c518'}
+              onMouseOver={(e) => e.currentTarget.style.background = '#ecc449'}
               onMouseOut={(e) => e.currentTarget.style.background = 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)'}
             >
-              <span style={{ transition: 'color 0.3s ease' }} onMouseOver={(e) => e.currentTarget.style.color = '#1a1a2e'} onMouseOut={(e) => e.currentTarget.style.color = '#f5c518'}>˂</span>
+              <span style={{ transition: 'color 0.3s ease' }} onMouseOver={(e) => e.currentTarget.style.color = '#1a1a2e'} onMouseOut={(e) => e.currentTarget.style.color = '#ecc449'}>˂</span>
             </button>
 
             <motion.div
@@ -288,17 +288,17 @@ export default function Home() {
                     style={{ background: 'rgba(255, 255, 255, 0.9)', flex: 1 }}
                   >
                     <div className="card-content" style={{ padding: '25px' }}>
-                      <div style={{ fontSize: '2em', marginBottom: '10px', color: '#f5c518' }}>❝</div>
+                      <div style={{ fontSize: '2em', marginBottom: '10px', color: '#ecc449' }}>❝</div>
                       <p
                         style={{ fontStyle: 'italic', color: '#555', lineHeight: '1.6', marginBottom: '15px' }}
                         dangerouslySetInnerHTML={{ __html: testimonials[index].quote }}
                       />
                       <div style={{ borderTop: '1px solid #eee', paddingTop: '15px', marginTop: '15px' }}>
                         <h3 style={{ color: '#1a1a2e', marginBottom: '5px' }}>{testimonials[index].name}</h3>
-                        <p style={{ color: '#f5c518', fontWeight: 'bold', fontSize: '0.9em' }}>{testimonials[index].type}</p>
+                        <p style={{ color: '#ecc449', fontWeight: 'bold', fontSize: '0.9em' }}>{testimonials[index].type}</p>
                         <div style={{ marginTop: '10px' }}>
                           {[...Array(testimonials[index].rating)].map((_, i) => (
-                            <span key={i} style={{ color: '#f5c518', fontSize: '1.2em' }}>★</span>
+                            <span key={i} style={{ color: '#ecc449', fontSize: '1.2em' }}>★</span>
                           ))}
                         </div>
                       </div>
@@ -312,7 +312,7 @@ export default function Home() {
               onClick={() => setCurrentTestimonial((prev) => (prev >= testimonials.length - 2 ? 0 : prev + 2))}
               style={{
                 background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)',
-                border: '2px solid #f5c518',
+                border: '2px solid #ecc449',
                 borderRadius: '50%',
                 width: '50px',
                 height: '57px',
@@ -321,14 +321,14 @@ export default function Home() {
                 alignItems: 'center',
                 justifyContent: 'center',
                 fontSize: '1.5em',
-                color: '#f5c518',
+                color: '#ecc449',
                 transition: 'all 0.3s ease',
                 flexShrink: 0
               }}
-              onMouseOver={(e) => e.currentTarget.style.background = '#f5c518'}
+              onMouseOver={(e) => e.currentTarget.style.background = '#ecc449'}
               onMouseOut={(e) => e.currentTarget.style.background = 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)'}
             >
-              <span style={{ transition: 'color 0.3s ease' }} onMouseOver={(e) => e.currentTarget.style.color = '#1a1a2e'} onMouseOut={(e) => e.currentTarget.style.color = '#f5c518'}>▶</span>
+              <span style={{ transition: 'color 0.3s ease' }} onMouseOver={(e) => e.currentTarget.style.color = '#1a1a2e'} onMouseOut={(e) => e.currentTarget.style.color = '#ecc449'}>▶</span>
             </button>
           </div>
 
@@ -343,7 +343,7 @@ export default function Home() {
                   borderRadius: '50%',
                   border: 'none',
                   padding:'12px',
-                  background: currentTestimonial === startIndex ? '#f5c518' : '#ccc',
+                  background: currentTestimonial === startIndex ? '#ecc449' : '#ccc',
                   cursor: 'pointer',
                   transition: 'background 0.3s ease'
                 }}
@@ -378,7 +378,7 @@ export default function Home() {
               <img src={movie.poster} alt={movie.name} />
               <div className="card-content">
                 <h3>{movie.name}</h3>
-                <p style={{ color: "#f5c518", fontWeight: "bold" }}>Rating: {movie.rating}</p>
+                <p style={{ color: "#ecc449", fontWeight: "bold" }}>Rating: {movie.rating}</p>
                 <div className="timings">
                   {movie.timings && movie.timings.map((time, index) => (
                     <span key={index} className="timing-badge">{time}</span>
@@ -393,7 +393,7 @@ export default function Home() {
 
       <motion.div
         // className="feature-section"
-        // style={{ borderLeft: '4px solid #f5c518' }}
+        // style={{ borderLeft: '4px solid #ecc449' }}
         initial="hidden"
         whileInView="visible"
         variants={slideFromLeftVariants}

@@ -59,10 +59,10 @@ export default function About() {
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
     >
-      <h1 style={{textAlign:'center', fontSize:'4rem',marginBottom:'-3rem'}}>GRANDE CINES</h1>
-      <p style={{textAlign:'center', marginBottom:'-2rem', fontSize: '2em', fontStyle: 'italic'}}>...where stories come alive.</p>
-      <div style={{ textAlign: 'center',marginBottom:'-7rem' }}>
-         <img src="/main_logo.png" alt="GrandeCines Logo" style={{ width: '44%', height: '10%' }} />
+      <h1 className="about-title">GRANDE CINES</h1>
+      <p className="about-tagline">...where stories come alive.</p>
+      <div className="about-logo-wrapper">
+         <img src="/main_logo.png" alt="GrandeCines Logo" />
       </div>
       
       {/* <motion.div
@@ -78,7 +78,7 @@ export default function About() {
       {/* About Grande Cines Section */}
       <motion.div
       //  ÷\ className="feature-section"
-        // style={{ borderLeft: '4px solid #f5c518' }}
+        // style={{ borderLeft: '4px solid #ecc449' }}
         initial="hidden"
         whileInView="visible"
         variants={slideFromLeftVariants}
@@ -94,12 +94,7 @@ export default function About() {
 
       {/* Vision & Mission Section */}
       <motion.div
-        style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-          gap: '25px',
-          marginTop: '30px',
-        }}
+        className="about-vision-grid"
         initial="hidden"
         whileInView="visible"
         variants={containerVariants}
@@ -117,7 +112,7 @@ export default function About() {
           }}
         >
           {/* <div style={{ fontSize: '3em', marginBottom: '15px' }}>🎯</div> */}
-          <h3 style={{ color: '#f5c518', marginBottom: '15px', fontSize: '1.5em' }}>Vision</h3>
+          <h3 style={{ color: '#ecc449', marginBottom: '15px', fontSize: '1.5em' }}>Vision</h3>
           <p style={{ color: '#ccc', lineHeight: '1.8' }}>
            We started Grande Cines with the goal to redefine the movie experience of the movie lovers by making premium facilities accessible and sustainable at scale. We believe that world class experiences should not be limited to luxury price points, and that affordability and excellence, both can coexist when driven by the right processes, partnerships, and discipline.<br/><br/>We are committed in delivering uncompromised standards across every touchpoint with cutting-edge audio and visual technology, thoughtfully designed spaces, and F&B offerings that is aligned with international benchmarks. Our culinary philosophy is rooted in quality without any shortcuts and cost cutting, using the best raw materials and imported seasonings to ensure consistency, taste, and brand trust among our patrons.
           </p>
@@ -135,7 +130,7 @@ export default function About() {
           }}
         >
           {/* <div style={{ fontSize: '3em', marginBottom: '15px' }}>🚀</div> */}
-          <h3 style={{ color: '#f5c518', marginBottom: '15px', fontSize: '1.5em' }}>Mission</h3>
+          <h3 style={{ color: '#ecc449', marginBottom: '15px', fontSize: '1.5em' }}>Mission</h3>
           <p style={{ color: '#ccc', lineHeight: '1.8' }}>
            Our mission is to build and expand Grande Cines as a cinema exhibition brand that consistently delivers premium yet affordable experience across India. We aim to achieve this through a disciplined expansion strategy focused on operational excellence, standardisation, and strong unit-level profitability for the investors.<br/><br/>We are committed to replicating our core strengths superior movie experience, high quality F&B offerings made with uncompromised ingredients, and customer-centric service, across every location. By establishing robust systems, reliable supply chains, and strong local execution teams, we ensure uniform quality while scaling efficiently.<br/><br/>As we grow, our mission is to create a future-ready cinema platform that adapts to evolving audience preferences, leverages technology to improve efficiency, and builds long-term value for the stakeholders. Through responsible growth and strategic partnerships, we seek to position ourselves as a trusted national cinema brand with sustainable returns.
           </p>
@@ -187,7 +182,7 @@ export default function About() {
 
       {/* <motion.div
         className="feature-section"
-        style={{ borderLeft: '4px solid #f5c518', marginTop: '40px' }}
+        style={{ borderLeft: '4px solid #ecc449', marginTop: '40px' }}
         initial="hidden"
         whileInView="visible"
         variants={slideFromLeftVariants}

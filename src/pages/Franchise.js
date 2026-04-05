@@ -66,11 +66,11 @@ export default function Franchise() {
   };
 
   const benefits = [
-    { icon: "📽️", title: "Curved Screen Technology", desc: "Offer your customers the unique curved screen experience - a proven crowd puller" },
-    { icon: "🎬", title: "Latest Technology", desc: "Access to cutting-edge cinema technology including 4K projection and Dolby Atmos" },
+    { icon: "🎬", title: "Curved Screen Technology", desc: "Offer your customers the unique curved screen experience - a proven crowd puller" },
+    { icon: "📽️", title: "Latest Technology", desc: "Access to cutting-edge cinema technology including laser projection and Dolby Atmos" },
     { icon: "📈", title: "Strong Support", desc: "Comprehensive training and ongoing operational support from our experienced team" },
     { icon: "🌟", title: "Brand Recognition", desc: "Partner with Grande Cines - known for Guwahati's only curved screen cinema" },
-    { icon: "💰", title: "High ROI", desc: "Attractive profit margins with the unique selling point of curved screen technology" },
+    { icon: "💰", title: "Attractive ROI", desc: "Attractive profit margins with the unique selling point of curved screen technology" },
     { icon: "🤝", title: "Complete Assistance", desc: "From setup to management, we're with you at every step of the journey" },
   ];
 
@@ -85,7 +85,7 @@ export default function Franchise() {
       <h1 style={{textAlign:'center'}}>BRING GRANDE CINES TO YOUR CITY</h1>
       <motion.div
         // className="feature-section"
-        // style={{ borderLeft: '4px solid #f5c518' }}
+        // style={{ borderLeft: '4px solid #ecc449' }}
         initial="hidden"
         whileInView="visible"
         variants={slideFromLeftVariants}
@@ -104,20 +104,24 @@ export default function Franchise() {
 
         {/* <p>Our flagship <strong>Curved Screen Technology</strong> has made Grande Cines a household name in Guwahati. As a franchise partner, you'll have exclusive rights to bring this unique cinema experience to your region - setting your theater apart from all competition.</p> */}
       </motion.div>
-      <h1 style={{textAlign:'center'}}>WHY US?</h1>
+      <h1 style={{textAlign:'center'}}>THE GRANDE CINES ADVANTAGE</h1>
       {/* <p>Bring Guwahati's Famous Curved Screen Cinema Experience to Your City</p> */}
 
       
 
       <motion.div
-        className="feature-section"
+        // className="feature-section"
         initial="hidden"
         whileInView="visible"
         variants={slideFromRightVariants}
         viewport={{ once: true }}
       >
         {/* <h3>Why Franchise with Grande Cines?</h3> */}
-        <p>We at Grande Cines combine strong industry understanding with a passion for delivering a premium cinema experience to the visitors. As a locally rooted brand from Assam, we understand the pulse of regional audiences while adopting modern exhibition standards. Our franchise model is designed to be practical, transparent, and investor-friendly, offering operational support, branding strength, and a proven approach to cinema management. With our focus on affordable yet high quality multiplex development, strategic locations, and efficient operations, we aim to build profitable exhibition while expanding quality movie watching experience across emerging markets. Partnering with Grande Cines means growing with a brand that values long-term relationships, sustainable expansion, and consistent audience engagement.</p>
+        <p>
+We at Grande Cines have a vision to build modern cinema spaces that deliver a premium movie experience at a practical investment cost. Our model is designed to keep capital expenditure efficient while ensuring audiences enjoy premium quality screens, sound, and comfort. This balanced approach allows investors to enter the cinema business with significantly lower investment compared to traditional multiplex chains, making the opportunity both competitive and sustainable.</p>
+
+<p>
+From concept and design upto complete execution; our team manages the entire process of building and launching a cinema. We also collaborate with existing properties by taking over the management and operational development of ongoing or underperforming cinema projects, transforming them into professionally run entertainment destinations in your region. With our cost-efficient model and hands-on support, the investors gain a reliable partner focused on maximizing value while delivering a premium cinema experience.</p>
       </motion.div>
 
       <motion.h2
@@ -126,7 +130,7 @@ export default function Franchise() {
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
       >
-        Key Benefits
+       <p style={{textAlign:'center'}}> Key Benefits</p>
       </motion.h2>
       <motion.div
         className="grid"
@@ -160,7 +164,7 @@ export default function Franchise() {
         ))}
       </motion.div>
 
-      <motion.div
+      {/* <motion.div
         className="stats"
         initial="hidden"
         whileInView="visible"
@@ -188,7 +192,7 @@ export default function Franchise() {
           <p className="number">High</p>
           <p>ROI Potential</p>
         </motion.div>
-      </motion.div>
+      </motion.div> */}
 
       {/* <motion.div
         className="feature-section"
@@ -205,7 +209,7 @@ export default function Franchise() {
       </motion.div> */}
 
       <motion.div
-        className="feature-section"
+        // className="feature-section"
         initial="hidden"
         whileInView="visible"
         variants={slideFromLeftVariants}
@@ -337,7 +341,7 @@ export default function Franchise() {
               disabled={status.loading}
               style={{
                 padding: '15px 30px',
-                backgroundColor: status.loading ? '#ccc' : '#f5c518',
+                backgroundColor: status.loading ? '#ccc' : '#ecc449',
                 color: '#000',
                 border: 'none',
                 borderRadius: '8px',

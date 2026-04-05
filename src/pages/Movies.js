@@ -115,7 +115,7 @@ export default function Movies() {
               <img src={movie.poster} alt={movie.name} style={{objectFit:'contain'}}/>
               <div className="card-content">
                 <h3>{movie.name}</h3>
-                <p style={{ color: "#f5c518", fontWeight: "bold" }}>{movie.upcomingRelease}</p>
+                <p style={{ color: "#ecc449", fontWeight: "bold" }}>{movie.upcomingRelease}</p>
                 <button onClick={() => window.open("https://in.bookmyshow.com/cinemas/GUW/grande-cines-paltan-bazar-guwahati/GRCG/", "_blank")}>Book Now</button>
               </div>
             </motion.div>
@@ -179,7 +179,7 @@ export default function Movies() {
                     <img src={movie.poster} alt={movie.name}  style={{objectFit:'contain'}}/>
                     <div className="card-content">
                       <h3>{movie.name}</h3>
-                      <p style={{ color: '#f5c518', fontWeight: 'bold', marginTop: '10px' }}>Release Date: {formatReleaseDate(movie.release)}</p>
+                      <p style={{ color: '#ecc449', fontWeight: 'bold', marginTop: '10px' }}>Release Date: {formatReleaseDate(movie.release)}</p>
                       {/* <button>Notify Me</button> */}
                     </div>
                   </motion.div>
@@ -226,8 +226,8 @@ export default function Movies() {
             <span style={{ fontSize: '3em' }}>📞</span>
             <h3 style={{ marginTop: '15px', color: '#1a1a2e' }}>TeleBooking</h3>
             <p style={{ color: '#555', lineHeight: '1.6', marginTop: '10px' }}>
-                <a href="tel:+919854017771" style={{color: '#1a1a2e', fontWeight: 'bold'}}>
-              +91 98540 17771
+                <a href="tel:+917099991770" style={{color: '#1a1a2e', fontWeight: 'bold'}}>
+              +91 70999 91770
               </a>
             </p>
           </div>

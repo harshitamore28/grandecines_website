@@ -102,7 +102,7 @@ export default function Upcoming() {
               <img src={movie.poster} alt={movie.name} />
               <div className="card-content">
                 <h3>{movie.name}</h3>
-                <p style={{ color: '#f5c518', fontWeight: 'bold', marginTop: '10px' }}>Release Date: {formatReleaseDate(movie.release)}</p>
+                <p style={{ color: '#ecc449', fontWeight: 'bold', marginTop: '10px' }}>Release Date: {formatReleaseDate(movie.release)}</p>
                 <button>Notify Me</button>
               </div>
             </motion.div>
