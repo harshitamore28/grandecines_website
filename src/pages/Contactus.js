@@ -102,8 +102,9 @@ export default function Contactus() {
             <h3 style={{ marginTop: '15px', color: '#1a1a2e' }}>Phone</h3>
             <p style={{ color: '#555', marginTop: '10px' }}>
               <a href="tel:+917099991770" style={{ color: '#1a1a2e', textDecoration: 'none', fontWeight: 'bold' }}>
-                +91 70999 91770
+                +91 98540 17771
               </a>
+              <p>11am - 5pm</p>
             </p>
             {/* <p style={{ color: '#555', marginTop: '5px' }}>
               <a href="tel:+917099991770" style={{ color: '#1a1a2e', textDecoration: 'none', fontWeight: 'bold' }}>

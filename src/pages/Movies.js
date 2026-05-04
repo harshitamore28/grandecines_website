@@ -226,8 +226,8 @@ export default function Movies() {
             <span style={{ fontSize: '3em' }}>📞</span>
             <h3 style={{ marginTop: '15px', color: '#1a1a2e' }}>TeleBooking</h3>
             <p style={{ color: '#555', lineHeight: '1.6', marginTop: '10px' }}>
-                <a href="tel:+917099991770" style={{color: '#1a1a2e', fontWeight: 'bold'}}>
-              +91 70999 91770
+                <a href="tel:+919854017771" style={{color: '#1a1a2e', fontWeight: 'bold'}}>
+              +91 98540 17771
               </a>
             </p>
           </div>
